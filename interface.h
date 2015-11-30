@@ -15,6 +15,7 @@ public:
     void deleteInfo();
 
 private:
+    int userChoice;
     string firstName;
     string lastName;
     int yob;

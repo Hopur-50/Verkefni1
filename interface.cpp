@@ -11,15 +11,40 @@ void Interface::menu()//displays the initial menu for user
     cout << "1. Display all info" << endl;
     cout << "2. Arrange list" << endl;
     cout << "3. Search for name" << endl;
-    cout << "4. Edit" << endl;
-    cout << "5. Delete" << endl;
-    cin >> choiceFromUser;
+    //cout << "4. Edit" << endl;
+    //cout << "5. Delete" << endl;
+    cin >> userChoice;
+    switch (userChoice) {
+    case 0:
+        addNew();
+        break;
+    case 1:
+        displayList();
+        break;
+    case 2:
+        selectOrder();
+        break;
+    case 3:
+        search();
+        break;
+    default:
+        break;
+    }
+
 
 }
-void displayList()
+
+void Interface::addNew()
 {
-    cout << "Enter first name, last name, gender, year of birth and, if applies, year of death, otherwise leave empty" << endl;
-    cin >> firstName >> lastName >> gender >> yob >> yod;
+    cout << "Please fill inn the fileds below\n";
+    << "First name: ";
+    cin >> firstName;
+    cout << "Last name: ";
+    cin >> lastName;
+    cout << "Year of birth: ";
+    cin >> yob;
+    cout << "Year of death, if person is still alive enter 0\n";
+    cin >> yod;
     //call functions from datalayer to get info from user
 
 }
@@ -40,7 +65,7 @@ void Interface::selectOrder()
     cout << "1. Alphabetically by first name" << endl;
     cout << "2. By date of birth ascending" << endl;
     cout << "3. By date of birth descending" << endl;
-    cin >> choiceFromUser;
+    cin >> userChoice;
 }
 
 void Interface::search()
@@ -48,5 +73,5 @@ void Interface::search()
     cout << "Search options" << endl;
     cout << "0. By name" << endl;
     cout << "1. By year" << endl;
-    cin >> choiceFromUser;
+    cin >> userChoice;
 }
