@@ -14,11 +14,10 @@ public:
     void displayList();
     void selectOrder();
     void search();
-    void edit();
-    void deleteInfo();
+   /* void edit();
+    void deleteInfo();*/
 
 private:
-    int userChoice;
     string firstName;
     string lastName;
     int yob;
