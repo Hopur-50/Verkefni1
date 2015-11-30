@@ -21,4 +21,4 @@ Bæta við nýjum
  Les inn í breytur
  Vistar í CS object
  Bætir inn í Vector
- Skrifar í skr·
+ Skrifar í skrá
