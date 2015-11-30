@@ -7,11 +7,12 @@ using namespace std;
 class ComputerScientist
 {
     public:
-        ComputerScientist(string name, char sex, int birth, int death);
+        ComputerScientist(string first_name, string last_name, char sex, int birth, int death);
         virtual ~ComputerScientist();
     protected:
     private:
-        string name;
+        string first_name;
+        string last_name;
         char sex;
         int year_of_birth;
         int year_of_death;
