@@ -1,24 +1,24 @@
-Forrit ræsir
-Les inn skrá
-Vistar í vector meğ röğun
-Bığur upp á valmynd
- 1. Bæta viğ nıjum
- 2. Sına lista
- 3. Röğun
-    a. Stafrófsröğ, eftirnafn
-    b. Stafrófsröğ, fornafn
-    c. Fæğingarár, hækkandi
-    d. Fæğingarár, lækkandi
+Forrit rÃ¦sir
+Les inn skrÃ¡
+Vistar Ã­ vector meÃ° rÃ¶Ã°un
+BÃ½Ã°ur upp Ã¡ valmynd
+ 1. BÃ¦ta viÃ° nÃ½jum
+ 2. SÃ½na lista
+ 3. RÃ¶Ã°un
+    a. StafrÃ³fsrÃ¶Ã°, eftirnafn
+    b. StafrÃ³fsrÃ¶Ã°, fornafn
+    c. FÃ¦Ã°ingarÃ¡r, hÃ¦kkandi
+    d. FÃ¦Ã°ingarÃ¡r, lÃ¦kkandi
  4. Leit
     a. eftir nafni
-    b. eftir ári
- 5. Breyta upplısingum
- 6. Eyğa færslu
+    b. eftir Ã¡ri
+ 5. Breyta upplÃ½singum
+ 6. EyÃ°a fÃ¦rslu
 
 -----------------------------
 
-Bæta viğ nıjum
- Les inn í breytur
- Vistar í CS object
- Bætir inn í Vector
- Skrifar í skrá
+BÃ¦ta viÃ° nÃ½jum
+ Les inn Ã­ breytur
+ Vistar Ã­ CS object
+ BÃ¦tir inn Ã­ Vector
+ Skrifar Ã­ skrÂ·
