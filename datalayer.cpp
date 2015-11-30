@@ -61,7 +61,7 @@ void DataLayer::addNewInfo()
 
 void DataLayer::sort_by_last()
 {
-    struct less_than_last_name
+    struct sort_last_name
     {
         bool operator() (ComputerScientist& cs1, ComputerScientist& cs2)
         {
@@ -71,4 +71,5 @@ void DataLayer::sort_by_last()
             return false;
         }
     };
+    sort(CSstorer5000.begin(), CSstorer5000.end(), sort_last_name);
 }
