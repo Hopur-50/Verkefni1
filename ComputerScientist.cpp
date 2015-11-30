@@ -1,4 +1,5 @@
 #include "ComputerScientist.h"
+#include<string>
 
 ComputerScientist::ComputerScientist(string first_name, string last_name, char sex, int birth, int death)
 {
@@ -14,19 +15,28 @@ ComputerScientist::~ComputerScientist()
 {
     //dtor
 }
-string ComputerScientist::getName()
+
+string ComputerScientist::getFirstName()
 {
-    return m_name;
+    return first_name;
 }
-int ComputerScientist::getAge()
+string ComputerScientist::getLastName()
+{
+    return last_name;
+}
+/*int ComputerScientist::getAge()
 {
     return m_age;
-}
-string ComputerScientist::getGender()
+}*/
+char ComputerScientist::getGender()
 {
-    return m_gender;
+    return sex;
 }
 int ComputerScientist::getYearOfBirth()
 {
-    return m_year_of_birth;
+    return year_of_birth;
+}
+int ComputerScientist::getYearOfDeath()
+{
+    return year_of_death;
 }

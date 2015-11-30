@@ -4,7 +4,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <ComputerScientist.h>
+#include "ComputerScientist.h"
 using namespace std;
 
 
@@ -16,6 +16,7 @@ public:
     void closeCSstream(ifstream CSstream);
     void printAll();
     void read_from_file();
+    void sort_by_last();
 
 private:
     vector<ComputerScientist> CSstorer5000;

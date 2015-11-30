@@ -1,6 +1,7 @@
 #ifndef INTERFACE_H
 #define INTERFACE_H
 
+using namespace std;
 
 class Interface
 {
@@ -15,7 +16,11 @@ public:
     void deleteInfo();
 
 private:
-
+    string firstName;
+    string lastName;
+    int yob;
+    int yod;
+    char gender;
 };
 
 #endif // INTERFACE_H
