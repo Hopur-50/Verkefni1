@@ -25,7 +25,7 @@ void DataLayer::printAll(){
 //
 void DataLayer::read_from_file(){
 
-    while(CSstream){
+    while(openCSstream()){
         string str;
         string first_name;
         string last_name;
@@ -41,7 +41,6 @@ void DataLayer::read_from_file(){
         }
 }
 
-<<<<<<< HEAD
 void DataLayer::addNewInfo()
 {
     for (int i = 0; i < 1; i++)
@@ -60,15 +59,9 @@ void DataLayer::addNewInfo()
 
 }
 
-
-
-
-
-
-=======
 void DataLayer::sort_by_last()
 {
-    struct less_than_last_name
+    struct sort_last_name
     {
         bool operator() (ComputerScientist& cs1, ComputerScientist& cs2)
         {
@@ -78,5 +71,20 @@ void DataLayer::sort_by_last()
             return false;
         }
     };
+    sort(CSstorer5000.begin(), CSstorer5000.end(), sort_last_name);
 }
->>>>>>> cd7d8236ad8278108addb272795e282b2d77ce8f
+
+void DataLayer::sort_by_first()
+{
+    struct sort_first_name
+    {
+        bool operator() (ComputerScientist& cs1, ComputerScientist& cs2)
+        {
+            string name1 = cs1.getFirstName();
+            string name2 = cs2.getFirstName();
+            if (name1.compare(name2) < 0) return true;
+            return false;
+        }
+    };
+    sort(CSstorer5000.begin(), CSstorer5000.end(), sort_first_name);
+}
