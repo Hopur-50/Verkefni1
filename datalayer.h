@@ -18,6 +18,8 @@ public:
     void read_from_file();
     void sort_by_last();
     void sort_by_first();
+    void sort_by_year_ascending();
+    void sort_by_year_descending();
 
 private:
     vector<ComputerScientist> CSstorer5000;

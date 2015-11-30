@@ -88,3 +88,27 @@ void DataLayer::sort_by_first()
     };
     sort(CSstorer5000.begin(), CSstorer5000.end(), sort_first_name);
 }
+
+void sort_by_year_ascending()
+{
+    struct year_asc
+    {
+        bool operator() (ComputerScientist& cs1, ComputerScientist& cs2)
+        {
+            return cs1.getYearOfBirth() < cs2.getYearOfBirth();
+        }
+    };
+    sort(CSstorer5000.begin(), CSstorer5000.end(), year_asc);
+}
+
+void sort_by_year_descending()
+{
+    struct year_desc
+    {
+        bool operator() (ComputerScientist& cs1, ComputerScientist& cs2)
+        {
+            return cs2.getYearOfBirth() < cs1.getYearOfBirth();
+        }
+    };
+    sort(CSstorer5000.begin(), CSstorer5000.end(), year_desc);
+}
