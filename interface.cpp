@@ -14,9 +14,9 @@ void Interface::menu()//displays the initial menu for user
     cout << "4. Edit" << endl;
     cout << "5. Delete" << endl;
     cin >> choiceFromUser;
-}
 
-void Interface::addNew()
+}
+void displayList()
 {
     cout << "Enter first name, last name, gender, year of birth and, if applies, year of death, otherwise leave empty" << endl;
     cin >> firstName >> lastName >> gender >> yob >> yod;
@@ -50,14 +50,3 @@ void Interface::search()
     cout << "1. By year" << endl;
     cin >> choiceFromUser;
 }
-/*
-void Interface::edit()
-{
-    cout << "Enter the "
-
-}
-void Interface::deleteInfo()
-{
-
-}
-*/

@@ -14,3 +14,19 @@ ComputerScientist::~ComputerScientist()
 {
     //dtor
 }
+string ComputerScientist::getName()
+{
+    return m_name;
+}
+int ComputerScientist::getAge()
+{
+    return m_age;
+}
+string ComputerScientist::getGender()
+{
+    return m_gender;
+}
+int ComputerScientist::getYearOfBirth()
+{
+    return m_year_of_birth;
+}
