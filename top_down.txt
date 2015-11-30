@@ -1,0 +1,24 @@
+Forrit ræsir
+Les inn skrá
+Vistar í vector með röðun
+Býður upp á valmynd
+ 1. Bæta við nýjum
+ 2. Sýna lista
+ 3. Röðun
+    a. Stafrófsröð, eftirnafn
+    b. Stafrófsröð, fornafn
+    c. Fæðingarár, hækkandi
+    d. Fæðingarár, lækkandi
+ 4. Leit
+    a. eftir nafni
+    b. eftir ári
+ 5. Breyta upplýsingum
+ 6. Eyða færslu
+
+-----------------------------
+
+Bæta við nýjum
+ Les inn í breytur
+ Vistar í CS object
+ Bætir inn í Vector
+ Skrifar í skrá
