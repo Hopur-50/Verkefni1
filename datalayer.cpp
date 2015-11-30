@@ -25,7 +25,7 @@ void DataLayer::printAll(){
 
 void DataLayer::read_from_file(){
 
-    while(CSstream){
+    while(openCSstream()){
         string str;
         string first_name;
         string last_name;
