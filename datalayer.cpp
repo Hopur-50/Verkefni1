@@ -41,3 +41,26 @@ void DataLayer::read_from_file(){
         }
 }
 
+void DataLayer::addNewInfo()
+{
+    for (int i = 0; i < 1; i++)
+    {
+        cout << "Name: ";
+        cin  >> CSstorer5000[i].first_name;
+             >> CSstorer5000[i].last_name;
+        cout >> "Sex: ";
+        cin  >> CSstorer5000[i].sex;
+        cout << "Year of birth: ";
+        cin  >> CSstorer5000[i].year_of_birth;
+        cout << "Year of death: (write 0 if still alive)";
+        cin  >> CSstorer5000[i].year_of_death;
+        cout << endl;
+    }
+
+}
+
+
+
+
+
+
