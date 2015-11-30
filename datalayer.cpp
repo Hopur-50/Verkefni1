@@ -4,7 +4,7 @@ DataLayer::DataLayer()
 {
 
 }
-
+//data
 ifstream DataLayer::openCSstream(){
     ifstream CSstream;
     CSstream.open("Computer_Scientists.txt");
@@ -22,7 +22,7 @@ void DataLayer::printAll(){
              << "Year of death: " << CSstorer5000[i].getYearOfDeath() << endl;
     }
 }
-
+//
 void DataLayer::read_from_file(){
 
     while(CSstream){
