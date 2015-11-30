@@ -12,7 +12,6 @@ void addNew()
 {
 
 }
-{
 void displayList()
 {
 
@@ -29,7 +28,7 @@ void edit()
 {
 
 }
-void delete()
+void deleteInfo()
 {
 
 }

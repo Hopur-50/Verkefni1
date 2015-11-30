@@ -1,5 +1,11 @@
 #ifndef DATALAYER_H
 #define DATALAYER_H
+#include <fstream>
+#include <iostream>
+#include <string>
+#include <vector>
+#include <ComputerScientist.h>
+using namespace std;
 
 
 class DataLayer
