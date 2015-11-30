@@ -49,7 +49,7 @@ void Interface::addNew()
 
 }
 
-void Interface::displayList()
+/*void Interface::displayList()
 {
     for(int i = 0; i < size(); i++)
     {
@@ -57,7 +57,8 @@ void Interface::displayList()
     }
     cout << endl;
 
-}
+}*/
+
 void Interface::selectOrder()
 {
     cout << "Which order would you like to retrieve list items in?" << endl;

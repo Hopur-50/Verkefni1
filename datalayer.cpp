@@ -41,24 +41,6 @@ void DataLayer::read_from_file(){
         }
 }
 
-void DataLayer::addNewInfo()
-{
-    for (int i = 0; i < 1; i++)
-    {
-        cout << "Name: ";
-        cin  >> CSstorer5000[i].first_name;
-             >> CSstorer5000[i].last_name;
-        cout >> "Sex: ";
-        cin  >> CSstorer5000[i].sex;
-        cout << "Year of birth: ";
-        cin  >> CSstorer5000[i].year_of_birth;
-        cout << "Year of death: (write 0 if still alive)";
-        cin  >> CSstorer5000[i].year_of_death;
-        cout << endl;
-    }
-
-}
-
 void DataLayer::sort_by_last()
 {
     struct less_than_last_name
@@ -71,4 +53,32 @@ void DataLayer::sort_by_last()
             return false;
         }
     };
+}
+
+ComputerScientist DataLayer::findByName(string name)
+{
+    for (unsigned int i = 0; i < CSstorer5000.size(); i++)
+    {
+        if(CSstorer5000[i].getFirstName() == name || CSstorer5000[i].getLastName() == name)
+        {
+             return CSstorer5000[i];
+        }
+    }
+
+    return null;
+}
+
+vector <ComputerScientist> DataLayer::findByYear(int year)
+{
+    vector <ComputerScientist> aliveThatYear;
+
+    for (unsigned int i = 0; i < CSstorer5000.size(); i++)
+    {
+        if(CSstorer5000[i].getYearOfBirth() < year && CSstorer5000[i].getYearOfDeath() > year)
+        {
+            aliveThatYear.push_back(CSstorer5000[i]);
+        }
+    }
+
+    return aliveThatYear;
 }
