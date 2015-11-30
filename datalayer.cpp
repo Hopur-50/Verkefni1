@@ -41,6 +41,31 @@ void DataLayer::read_from_file(){
         }
 }
 
+<<<<<<< HEAD
+void DataLayer::addNewInfo()
+{
+    for (int i = 0; i < 1; i++)
+    {
+        cout << "Name: ";
+        cin  >> CSstorer5000[i].first_name;
+             >> CSstorer5000[i].last_name;
+        cout >> "Sex: ";
+        cin  >> CSstorer5000[i].sex;
+        cout << "Year of birth: ";
+        cin  >> CSstorer5000[i].year_of_birth;
+        cout << "Year of death: (write 0 if still alive)";
+        cin  >> CSstorer5000[i].year_of_death;
+        cout << endl;
+    }
+
+}
+
+
+
+
+
+
+=======
 void DataLayer::sort_by_last()
 {
     struct less_than_last_name
@@ -54,3 +79,4 @@ void DataLayer::sort_by_last()
         }
     };
 }
+>>>>>>> cd7d8236ad8278108addb272795e282b2d77ce8f
