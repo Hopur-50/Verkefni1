@@ -41,7 +41,6 @@ void DataLayer::read_from_file(){
         }
 }
 
-<<<<<<< HEAD
 void DataLayer::addNewInfo()
 {
     for (int i = 0; i < 1; i++)
@@ -60,12 +59,6 @@ void DataLayer::addNewInfo()
 
 }
 
-
-
-
-
-
-=======
 void DataLayer::sort_by_last()
 {
     struct less_than_last_name
@@ -79,4 +72,3 @@ void DataLayer::sort_by_last()
         }
     };
 }
->>>>>>> cd7d8236ad8278108addb272795e282b2d77ce8f
