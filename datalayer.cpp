@@ -73,3 +73,18 @@ void DataLayer::sort_by_last()
     };
     sort(CSstorer5000.begin(), CSstorer5000.end(), sort_last_name);
 }
+
+void DataLayer::sort_by_first()
+{
+    struct sort_first_name
+    {
+        bool operator() (ComputerScientist& cs1, ComputerScientist& cs2)
+        {
+            string name1 = cs1.getFirstName();
+            string name2 = cs2.getFirstName();
+            if (name1.compare(name2) < 0) return true;
+            return false;
+        }
+    };
+    sort(CSstorer5000.begin(), CSstorer5000.end(), sort_first_name);
+}

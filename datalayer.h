@@ -17,6 +17,7 @@ public:
     void printAll();
     void read_from_file();
     void sort_by_last();
+    void sort_by_first();
 
 private:
     vector<ComputerScientist> CSstorer5000;
