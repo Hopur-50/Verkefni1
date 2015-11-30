@@ -76,8 +76,13 @@ void Interface::selectOrder()
     case 0:
         sort_by_last();
     case 1:
-
-
+        sort_by_last();
+        break;
+    case 2:
+        //sort_by_dobAscending();
+        break;
+    case 3:
+        //sort_by_dobDescending();
         break;
     default:
         break;
@@ -86,8 +91,18 @@ void Interface::selectOrder()
 
 void Interface::search()
 {
+    int userChoice;
     cout << "Search options" << endl;
     cout << "0. By name" << endl;
     cout << "1. By year" << endl;
     cin >> userChoice;
+    switch (userChoice) {
+    case 0:
+        findByName();
+        break;
+    case 1:
+        findByYear();
+    default:
+        break;
+    }
 }
