@@ -8,7 +8,14 @@ class ComputerScientist
 {
     public:
         ComputerScientist(string first_name, string last_name, char sex, int birth, int death);
-        virtual ~ComputerScientist();
+        ~ComputerScientist();
+        string getFirstName();
+        string getLastName();
+        //int getAge();
+        char getGender();
+        int getYearOfBirth();
+        int getYearOfDeath();
+
     protected:
     private:
         string first_name;

@@ -14,12 +14,12 @@ void DataLayer::closeCSstream(ifstream CSstream){
     CSstream.close();
 }
 void DataLayer::printAll(){
-    for(int i=0; i<CSstorer5000.size(); i++){
+    for(unsigned int i=0; i<CSstorer5000.size(); i++){
         cout << i+1 << ":\t"
-             << "Name: " << CSstorer5000[i].first_name << " " << CSstorer5000[i].last_name << "\t"
-             << "Sex: " << CSstorer5000[i].sex << "\t"
-             << "Year of birth: " << CSstorer5000[i].year_of_birth << "\t"
-             << "Year of death: " << CSstorer5000[i].year_of_death << endl;
+             << "Name: " << CSstorer5000[i].getFirstName() << " " << CSstorer5000[i].getLastName() << "\t"
+             << "Sex: " << CSstorer5000[i].getGender() << "\t"
+             << "Year of birth: " << CSstorer5000[i].getYearOfBirth() << "\t"
+             << "Year of death: " << CSstorer5000[i].getYearOfDeath() << endl;
     }
 }
 
@@ -41,3 +41,16 @@ void DataLayer::read_from_file(){
         }
 }
 
+void DataLayer::sort_by_last()
+{
+    struct less_than_last_name
+    {
+        bool operator() (ComputerScientist& cs1, ComputerScientist& cs2)
+        {
+            string name1 = cs1.getLastName();
+            string name2 = cs2.getLastName();
+            if (name1.compare(name2) < 0) return true;
+            return false;
+        }
+    };
+}
