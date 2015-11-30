@@ -13,16 +13,7 @@ ifstream DataLayer::openCSstream(){
 void DataLayer::closeCSstream(ifstream CSstream){
     CSstream.close();
 }
-void DataLayer::printAll(){
-    for(unsigned int i=0; i<CSstorer5000.size(); i++){
-        cout << i+1 << ":\t"
-             << "Name: " << CSstorer5000[i].getFirstName() << " " << CSstorer5000[i].getLastName() << "\t"
-             << "Sex: " << CSstorer5000[i].getGender() << "\t"
-             << "Year of birth: " << CSstorer5000[i].getYearOfBirth() << "\t"
-             << "Year of death: " << CSstorer5000[i].getYearOfDeath() << endl;
-    }
-}
-//
+
 void DataLayer::read_from_file(){
 
     while(openCSstream()){
@@ -81,7 +72,7 @@ ComputerScientist DataLayer::findByName(string name)
         }
     }
 
-    return null;
+    return NULL;
 }
 
 vector <ComputerScientist> DataLayer::findByYear(int year)

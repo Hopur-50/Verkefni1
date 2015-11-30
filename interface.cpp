@@ -1,4 +1,5 @@
 #include "interface.h"
+#include "servicelayer.h"
 
 Interface::Interface()
 {
@@ -8,24 +9,24 @@ void Interface::menu()//displays the initial menu for user
 {
     int userChoice;
     cout << "Choose a number from the menu" << endl;
-    cout << "0. Add new item to database" << endl;
-    cout << "1. Display all info" << endl;
-    cout << "2. Arrange list" << endl;
-    cout << "3. Search for name" << endl;
-    //cout << "4. Edit" << endl;
-    //cout << "5. Delete" << endl;
+    cout << "1. Add new item to database" << endl;
+    cout << "2. Display all info" << endl;
+    cout << "3. Arrange list" << endl;
+    cout << "4. Search for name" << endl;
+            //cout << "4. Edit" << endl;
+            //cout << "5. Delete" << endl;
     cin >> userChoice;
     switch (userChoice) {
-    case 0:
+    case 1:
         addNew();
         break;
-    case 1:
+    case 2:
         displayList();
         break;
-    case 2:
+    case 3:
         selectOrder();
         break;
-    case 3:
+    case 4:
         search();
         break;
     default:
@@ -48,7 +49,7 @@ void Interface::addNew()
     cin >> yob;
     cout << "Year of death, if person is still alive enter 0\n";
     cin >> yod;
-    ComputerScientist newGuy(firstName,lastName,gender,yob,yod);
+    //ComputerScientist newGuy(firstName,lastName,gender,yob,yod);
 
     //call functions from datalayer to get info from user
 
@@ -68,22 +69,22 @@ void Interface::selectOrder()
 {
     int userChoice;
     cout << "Which order would you like to retrieve list items in?" << endl;
-    cout << "0. Alphabetically by last name" << endl;
-    cout << "1. Alphabetically by first name" << endl;
-    cout << "2. By date of birth ascending" << endl;
-    cout << "3. By date of birth descending" << endl;
+    cout << "1. Alphabetically by last name" << endl;
+    cout << "2. Alphabetically by first name" << endl;
+    cout << "3. By date of birth ascending" << endl;
+    cout << "4. By date of birth descending" << endl;
     cin >> userChoice;
     switch (userChoice) {
-    case 0:
-        sort_by_last();
     case 1:
-        sort_by_last();
-        break;
+        sl.sort_by_last();
     case 2:
-        //sort_by_dobAscending();
+        sl.sort_by_first();
         break;
     case 3:
-        //sort_by_dobDescending();
+        sl.sort_by_year_ascending(); //kemur seinna
+        break;
+    case 4:
+        sl.sort_by_year_descending(); // kemur seinna
         break;
     default:
         break;
@@ -92,18 +93,29 @@ void Interface::selectOrder()
 
 void Interface::search()
 {
-    int userChoice;
+    int userChoice,year;
+    string name;
     cout << "Search options" << endl;
-    cout << "0. By name" << endl;
-    cout << "1. By year" << endl;
+    cout << "1. By name" << endl;
+    cout << "2. By year" << endl;
     cin >> userChoice;
     switch (userChoice) {
-    case 0:
-        findByName();
-        break;
     case 1:
-        findByYear();
+        sl.findByName(name);
+        break;
+    case 2:
+       sl.findByYear(year);
     default:
         break;
     }
 }
+
+/*void Interface::printAll(){
+    for(unsigned int i = 0; i < CSstorer5000.size(); i++){
+        cout << i+1 << ":\t"
+             << "Name: " << getFirstName() << " " << getLastName() << "\t"
+             << "Sex: " << getGender() << "\t"
+             << "Year of birth: " << getYearOfBirth() << "\t"
+             << "Year of death: " << getYearOfDeath() << endl;
+    }
+}*/

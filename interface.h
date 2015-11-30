@@ -3,6 +3,8 @@
 #include<iostream>
 #include<string>
 
+#include "servicelayer.h"
+
 using namespace std;
 
 class Interface
@@ -14,6 +16,7 @@ public:
     void displayList();
     void selectOrder();
     void search();
+    void printAll();
    /* void edit();
     void deleteInfo();*/
 
@@ -23,6 +26,7 @@ private:
     int yob;
     int yod;
     char gender;
+    ServiceLayer sl;
 };
 
 #endif // INTERFACE_H
