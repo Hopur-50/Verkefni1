@@ -11,11 +11,6 @@ ComputerScientist::ComputerScientist(string fName, string lName, char Sex, int b
     //ctor
 }
 
-ComputerScientist::~ComputerScientist()
-{
-    //dtor
-}
-
 string ComputerScientist::getFirstName()
 {
     return first_name;
