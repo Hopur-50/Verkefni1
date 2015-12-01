@@ -10,4 +10,4 @@ int main()
     return 0;
 }
 
-//HELLO, IS THERE ANYBODY IN THERE?
+//JUST NOD IF YOU CAN HEAR ME

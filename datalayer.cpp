@@ -7,10 +7,6 @@ DataLayer::DataLayer()
 }
 //data
 
-<<<<<<< HEAD
-
-=======
->>>>>>> cea00b153f789995df79aa02a68ad907fb9047e0
 
 void DataLayer::read_from_file(){
     ifstream CSstream;
