@@ -10,9 +10,11 @@ TEMPLATE = app
 SOURCES += main.cpp \
 interface.cpp \
 ComputerScientist.cpp \
-    datalayer.cpp
+    datalayer.cpp \
+    servicelayer.cpp
 
 HEADERS += \
 ComputerScientist.h \
 interface.h \
-    datalayer.h
+    datalayer.h \
+    servicelayer.h
