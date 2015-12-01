@@ -10,3 +10,4 @@ int main()
     return 0;
 }
 
+//JUST NOD IF YOU CAN HEAR ME
