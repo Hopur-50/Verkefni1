@@ -1,6 +1,7 @@
 #ifndef DATALAYER_H
 #define DATALAYER_H
 #include <fstream>
+#include <sstream>
 #include <iostream>
 #include <string>
 #include <vector>
@@ -15,7 +16,7 @@ class DataLayer
 public:
     DataLayer();
     ifstream openCSstream();
-    void closeCSstream(ifstream CSstream);
+    void closeCSstream(ifstream& CSstream);
     void printAll();
     void read_from_file(ifstream& CSstream);
     void sort_vector();
@@ -23,7 +24,7 @@ public:
     void sort_by_first();
     void sort_by_year_ascending();
     void sort_by_year_descending();
-    ComputerScientist findByName(string name);
+    ComputerScientist* findByName(string name);
     vector <ComputerScientist> findByYear(int year);
     void vectorToFile();
 
