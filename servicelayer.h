@@ -9,7 +9,7 @@ class ServiceLayer
 
 public:
     ServiceLayer();
-    void printAll();
+    void addNew(ComputerScientist cs);
     vector <ComputerScientist> getCS();
     void read_from_file();
     ComputerScientist* findByName(string name);

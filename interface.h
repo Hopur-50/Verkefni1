@@ -15,8 +15,13 @@ public:
     void displayList();
     void selectOrder();
     void search();
+<<<<<<< HEAD
     void printAll();
     void vectorToFile();
+=======
+    void displayVector(vector<ComputerScientist> vec);
+    void printCS(ComputerScientist cs);
+>>>>>>> 137df71d0253da2d45d3b96411e1f599043aaa43
 
 private:
     ServiceLayer sl;

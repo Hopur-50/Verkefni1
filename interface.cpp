@@ -1,5 +1,4 @@
 #include "interface.h"
-#include "servicelayer.h"
 
 Interface::Interface()
 {
@@ -60,10 +59,13 @@ void Interface::addNew()
     cin >> yod;
 
     ComputerScientist newGuy(firstName,lastName,gender,yob,yod);
+<<<<<<< HEAD
     sl.addToVec(newGuy);
 
+=======
+    sl.addNew(newGuy);
+>>>>>>> 137df71d0253da2d45d3b96411e1f599043aaa43
 }
-
 
 void Interface::displayList()
 {
@@ -79,8 +81,24 @@ void Interface::displayList()
              << "Year of birth: " << tempVec[i].getYearOfBirth() << "\t"
              << "Year of death: " << tempVec[i].getYearOfDeath() << endl;
     }
-
     cout << endl;
+}
+
+void Interface::displayVector(vector<ComputerScientist> vec)
+{
+    for(unsigned int i = 0; i < vec.size(); i++)
+    {
+        cout << i+1 << ":\n";
+        printCS(vec[i]);
+    }
+}
+
+void Interface::printCS(ComputerScientist cs)
+{
+    cout << "Name: " << cs.getFirstName() << " " << cs.getLastName() << "\t"
+         << "Sex: " << cs.getGender() << "\t"
+         << "Year of birth: " << cs.getYearOfBirth() << "\t"
+         << "Year of death: " << cs.getYearOfDeath() << endl;
 }
 
 

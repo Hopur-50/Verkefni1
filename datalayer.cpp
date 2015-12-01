@@ -1,5 +1,4 @@
 #include "datalayer.h"
-#include "ComputerScientist.h"
 
 DataLayer::DataLayer()
 {
@@ -29,6 +28,13 @@ void DataLayer::read_from_file(){
     sort_vector();
     CSstream.close();
 }
+
+void DataLayer::addNew(ComputerScientist cs)
+{
+    CSstorer5000.push_back(cs);
+    sort_vector();
+}
+
 int DataLayer::get_vector_size()
 {
     return CSstorer5000.size();
@@ -136,6 +142,11 @@ vector <ComputerScientist> DataLayer::findByYear(int year)
 
     for (unsigned int i = 0; i < CSstorer5000.size(); i++)
     {
+        if(CSstorer5000[i].getYearOfBirth() < year && CSstorer5000[i].getYearOfDeath() == 0)
+        {
+            aliveThatYear.push_back(CSstorer5000[i]);
+        }
+
         if(CSstorer5000[i].getYearOfBirth() < year && CSstorer5000[i].getYearOfDeath() > year)
         {
             aliveThatYear.push_back(CSstorer5000[i]);
