@@ -58,12 +58,12 @@ void Interface::addNew()
     cout << "Year of death, if the person is still alive enter 0\n";
     cin >> yod;
 
-    ComputerScientist newGuy(firstName,lastName,gender,yob,yod);
+    ComputerScientist newGuy(firstName,lastName,gender,yob,yod); //Adds the Computer Scientist to the vector and then file
     sl.addToVec(newGuy);
     sl.addNew(newGuy);
 
 }
-void Interface::displayList()
+void Interface::displayList() //Prints from the vector
 {
     int vectorSize;
     vectorSize = sl.returnSizeOfVector();
@@ -108,7 +108,8 @@ void Interface::selectOrder()
     cout << "2 for a list of first names in alphabetical order" << endl;
     cout << "3 for a list sorted by date of birth in ascending order" << endl;
     cout << "4 for a list sorted by date of birth in descending order" << endl;
-    cin >> userChoice2;
+        cin >> userChoice2;
+
     if(userChoice2 > 0 && userChoice2 < 5) sl.change_sort_order(userChoice2);
     else {
         cout << "Wrong input";
@@ -116,7 +117,7 @@ void Interface::selectOrder()
     }
 }
 
-void Interface::search()
+void Interface::search() //Allows user to search by name or check wich scientist were alice wich year
 {
     int userChoice,year;
     string name;
@@ -125,7 +126,8 @@ void Interface::search()
     cout << "------------------------------------" << endl;
     cout << "1 to search by name" << endl;
     cout << "2 to check whom of the computer scientist were alive that year" << endl;
-    cin >> userChoice;
+        cin >> userChoice;
+
     switch (userChoice) {
     case 1:
         cout << "What name would you like to search?" << endl;
@@ -136,12 +138,14 @@ void Interface::search()
         cout << "What year would you like to search?" << endl;
         cin >> year;
 
-        displayVector(sl.findByYear(year));
+        displayVector(sl.findByYear(year)); //Displays the vector with whom were alive that year
     default:
         break;
     }
 }
+
 void Interface::vectorToFile()
 {
     sl.vectorToFile();
+
 }
