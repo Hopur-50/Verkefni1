@@ -65,7 +65,6 @@ void Interface::addNew()
 
 }
 
-
 void Interface::displayList()
 {
     int vectorSize;
@@ -83,7 +82,6 @@ void Interface::displayList()
 
     cout << endl;
 }
-
 
 void Interface::selectOrder()
 {
@@ -123,6 +121,10 @@ void Interface::search()
         cout << "What year would you like to search?" << endl;
         cin >> year;
         sl.findByYear(year);
+        for (int i = 0; i)
+        {
+            cout <<
+        }
     default:
         break;
     }
