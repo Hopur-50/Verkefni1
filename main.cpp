@@ -1,9 +1,22 @@
 #include <QCoreApplication>
+#include <iostream>
+#include "interface.h"
+#include "servicelayer.h"
+#include <vector>
 
-int main(int argc, char *argv[])
+using namespace std;
+
+int main()
 {
-    QCoreApplication a(argc, argv);
+    Interface message;
+    message.menu();
 
-    return a.exec();
+    int exit = 0;
+    while(exit != 1) {
+        message.addNew();
+        cout << "Press 1 to quit or 0 to continue"
+        cin >> exit;
+    }
+    return 0;
 }
 
