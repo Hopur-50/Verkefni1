@@ -1,4 +1,11 @@
 #include "datalayer.h"
+#include "ComputerScientist.h"
+#include <fstream>
+#include <sstream>
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
 
 DataLayer::DataLayer()
 {
@@ -142,25 +149,18 @@ vector <ComputerScientist> DataLayer::findByYear(int year)
     return aliveThatYear;
 }
 
-/*void DataLayer::vectorToFile()
+void DataLayer::vectorToFile()
 {
-    string firstName;
-           firstName = getFirstName();
-           char getGender();
-           int getYearOfBirth();
-           int getYearOfDeath();
-
-   for(int i = 0; i < CSstorer5000.size(); i++)
+   for(unsigned int i = 0; i < CSstorer5000.size(); i++)
    {
-         CSstorer5000.push_back();                  //Á eftir að vinna fullt með
-         CSstorer5000[i].push_back(getLastName());
-         CSstorer5000[i].push_back(getGender()); //Búa til getGender fall
-         CSstorer5000[i].push_back(getYearOfBirth());
-         CSstorer5000[i].push_back(getYearOfDeath());
+           CSstorer5000[i].getFirstName();
+           CSstorer5000[i].getLastName();
+           CSstorer5000[i].getGender();
+           CSstorer5000[i].getYearOfBirth();
+           CSstorer5000[i].getYearOfDeath();
    }
 
-   // vector<ComputerScientist> CSstorer5000;
     ofstream output_file("./Computer_Scientists.txt");
     ostream_iterator<ComputerScientist> output_iterator(output_file, "\n");
     copy(CSstorer5000.begin(), CSstorer5000.end(), output_iterator);
-}*/
+}

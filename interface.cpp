@@ -111,7 +111,7 @@ void Interface::search()
         sl.findByName(name);
         break;
     case 2:
-       sl.findByYear(year);
+        sl.findByYear(year);
     default:
         break;
     }

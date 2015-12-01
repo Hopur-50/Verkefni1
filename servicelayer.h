@@ -1,5 +1,11 @@
 #ifndef SERVICELAYER_H
 #define SERVICELAYER_H
+#include <fstream>
+#include <sstream>
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
 #include "datalayer.h"
 
 

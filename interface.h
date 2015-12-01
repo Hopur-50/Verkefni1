@@ -1,8 +1,12 @@
 #ifndef INTERFACE_H
 #define INTERFACE_H
-#include<iostream>
-#include<string>
-
+#include <fstream>
+#include <sstream>
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include "ComputerScientist.h"
 #include "servicelayer.h"
 
 using namespace std;
