@@ -1,11 +1,5 @@
 #include "datalayer.h"
 #include "ComputerScientist.h"
-#include <fstream>
-#include <sstream>
-#include <iostream>
-#include <string>
-#include <vector>
-#include <algorithm>
 
 DataLayer::DataLayer()
 {

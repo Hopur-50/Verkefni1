@@ -1,11 +1,7 @@
 #ifndef COMPUTERSCIENTIST_H
 #define COMPUTERSCIENTIST_H
-#include <fstream>
-#include <sstream>
-#include <iostream>
+
 #include <string>
-#include <vector>
-#include <algorithm>
 
 using namespace std;
 
