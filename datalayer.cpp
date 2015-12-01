@@ -24,7 +24,7 @@ void DataLayer::read_from_file(){
         int yob;
         int yod;
         getline(CSstream, str, ';');
-        while (str >> first_name >> last_name >> sex >> yob >> yod)
+        while (str >> first_name >> last_name >> sex >> yob >> yod) //Villa, hvað ertu að meina með þessari while loopu?
         {
             ComputerScientist CStemp(first_name, last_name, sex, yob, yod);
             CSstorer5000.push_back(CStemp);
@@ -89,3 +89,28 @@ vector <ComputerScientist> DataLayer::findByYear(int year)
 
     return aliveThatYear;
 }
+
+
+/*void DataLayer::vectorToFile()
+{
+    string firstName;
+           firstName = getFirstName();
+           char getGender();
+           int getYearOfBirth();
+           int getYearOfDeath();
+
+   for(int i = 0; i < CSstorer5000.size(); i++)
+   {
+         CSstorer5000.push_back();                  //Á eftir að vinna fullt með
+         CSstorer5000[i].push_back(getLastName());
+         CSstorer5000[i].push_back(getGender()); //Búa til getGender fall
+         CSstorer5000[i].push_back(getYearOfBirth());
+         CSstorer5000[i].push_back(getYearOfDeath());
+   }
+
+   // vector<ComputerScientist> CSstorer5000;
+    ofstream output_file("./example.txt");
+    ostream_iterator<ComputerScientist> output_iterator(output_file, "\n");
+    copy(CSstorer5000.begin(), CSstorer5000.end(), output_iterator);
+}
+*/

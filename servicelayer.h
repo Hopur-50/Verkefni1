@@ -16,6 +16,7 @@ public:
     ComputerScientist findByName(string name);
     vector <ComputerScientist> findByYear(int year);
     void sort_by_first();
+    int returnSizeOfVector();
 private:
 
 

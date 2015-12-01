@@ -40,30 +40,38 @@ void Interface::addNew()
 
     cout << "Please fill inn the fileds below\n";
     cout << "First name: ";
-    cin >> firstName;
+        cin >> firstName;
     cout << "Last name: ";
-    cin >> lastName;
+        cin >> lastName;
     cout << "Gender, m for male, f for female, o for other:";
-    cin >> gender;
+        cin >> gender;
     cout << "Year of birth: ";
-    cin >> yob;
+        cin >> yob;
     cout << "Year of death, if person is still alive enter 0\n";
-    cin >> yod;
+        cin >> yod;
     //ComputerScientist newGuy(firstName,lastName,gender,yob,yod);
 
     //call functions from datalayer to get info from user
 
 }
 
-/*void Interface::displayList()
+void Interface::displayList()
 {
-    for(int i = 0; i < size(); i++)
+    int vectorSize;
+    vectorSize = sl.returnSizeOfVector();
+
+    for(int i = 0; i < vectorSize; i++)
     {
-        cout << "vector items";
+        cout << i+1 << ":\t"
+             << "Name: " << firstName << " " << lastName << "\t"
+             << "Sex: " << gender << "\t"
+             << "Year of birth: " << yob << "\t"
+             << "Year of death: " << yod << endl;
     }
+
     cout << endl;
 
-}*/
+}
 
 void Interface::selectOrder()
 {
@@ -81,10 +89,10 @@ void Interface::selectOrder()
         sl.sort_by_first();
         break;
     case 3:
-        sl.sort_by_year_ascending(); //kemur seinna
+        //sl.sort_by_year_ascending(); //kemur seinna, Birgir lætur inn heitið
         break;
     case 4:
-        sl.sort_by_year_descending(); // kemur seinna
+      //  sl.sort_by_year_descending(); // kemur seinna, Birgir lætur inn heitið
         break;
     default:
         break;
@@ -109,13 +117,3 @@ void Interface::search()
         break;
     }
 }
-
-/*void Interface::printAll(){
-    for(unsigned int i = 0; i < CSstorer5000.size(); i++){
-        cout << i+1 << ":\t"
-             << "Name: " << getFirstName() << " " << getLastName() << "\t"
-             << "Sex: " << getGender() << "\t"
-             << "Year of birth: " << getYearOfBirth() << "\t"
-             << "Year of death: " << getYearOfDeath() << endl;
-    }
-}*/

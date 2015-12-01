@@ -20,6 +20,7 @@ public:
     ComputerScientist findByName(string name);
     vector <ComputerScientist> findByYear(int year);
     void sort_by_first();
+    void vectorToFile();
 
 private:
     vector<ComputerScientist> CSstorer5000;

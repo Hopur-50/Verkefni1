@@ -40,3 +40,8 @@ void ServiceLayer::sort_by_first()
 {
     DataLayer.sort_by_first();
 }
+
+int ServiceLayer::returnSizeOfVector()
+{
+    return CSstorer5000.size();
+}
