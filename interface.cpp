@@ -57,8 +57,6 @@ void Interface::addNew()
 
 void Interface::displayList()
 {
-
-    //for(int i = 0; i < size(); i++)
     int vectorSize;
     vectorSize = sl.returnSizeOfVector();
 
@@ -90,10 +88,10 @@ void Interface::selectOrder()
         sl.sort_by_first();
         break;
     case 3:
-        //sl.sort_by_year_ascending(); //kemur seinna, Birgir lætur inn heitið
+        sl.sort_by_year_ascending();
         break;
     case 4:
-      //  sl.sort_by_year_descending(); // kemur seinna, Birgir lætur inn heitið
+        sl.sort_by_year_descending();
         break;
     default:
         break;
