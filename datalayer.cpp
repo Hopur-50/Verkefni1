@@ -39,6 +39,7 @@ void DataLayer::read_from_file(){
 int get_vector_size()
 {
     return CSstorer5000.size();
+
 }
 
 void DataLayer::sort_vector()
