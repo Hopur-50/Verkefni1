@@ -58,6 +58,7 @@ void Interface::addNew()
     cout << "Year of birth: ";
     cin >> yob;
     cout << "Year of death, if the person is still alive enter 0\n";
+    cin >> yod;
 
      ComputerScientist newGuy(firstName,lastName,gender,yob,yod);
     //call functions from datalayer to get info from user
