@@ -10,11 +10,11 @@ void Interface::menu()//displays the initial menu for user
     int userChoice;
     cout << "Choose a number from the menu" << endl;
     cout << "-----------------------------" << endl;
-    cout << "Choose 1 to add new item to database" << endl;
-    cout << "Choose 2 to display all info" << endl;
-    cout << "Choose 3 to arrange list" << endl;
-    cout << "Choose 4 to search for a name" << endl;
-    cout << "Choose 5 to quit the program" << endl;
+    cout << "1 to add new item to database" << endl;
+    cout << "2 to display all info" << endl;
+    cout << "3 to arrange list" << endl;
+    cout << "4 to search for a name" << endl;
+    cout << "5 to quit the program" << endl;
 
     cin >> userChoice;
     switch (userChoice) {
@@ -85,11 +85,12 @@ void Interface::selectOrder()
 {
     int userChoice;
     cout << "Which order would you like to retrieve list items in?" << endl;
+    cout << "Choose one of the following numbers:" << endl;
     cout << "-----------------------------------------------------" << endl;
-    cout << "Choose 1 for a list of last names in alphabetical order" << endl;
-    cout << "Choose 2 for a list of first names in alphabetical order" << endl;
-    cout << "Choose 3 for a list by date of birth in ascending order" << endl;
-    cout << "Choose 4 for a list by date of birth in descending order" << endl;
+    cout << "1 for a list of last names in alphabetical order" << endl;
+    cout << "2 for a list of first names in alphabetical order" << endl;
+    cout << "3 for a list sorted by date of birth in ascending order" << endl;
+    cout << "4 for a list sorted by date of birth in descending order" << endl;
     cin >> userChoice;
     switch (userChoice) {
     case 1:
@@ -113,9 +114,10 @@ void Interface::search()
     int userChoice,year;
     string name;
     cout << "Search options" << endl;
-    cout << "---------------" << endl;
-    cout << "Choose 1 to search by name" << endl;
-    cout << "Choose 2 to search by year" << endl;
+    cout << "Choose one of the following numbers:" << endl;
+    cout << "------------------------------------" << endl;
+    cout << "1 to search by name" << endl;
+    cout << "2 to check whom of the computer scientist were alive that year" << endl;
     cin >> userChoice;
     switch (userChoice) {
     case 1:
