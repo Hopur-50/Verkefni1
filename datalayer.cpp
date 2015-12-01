@@ -12,15 +12,8 @@ DataLayer::DataLayer()
     current_sort = LAST_NAME;
 }
 //data
-/*ifstream* DataLayer::openCSstream(){
-    ifstream CSstream;
-    CSstream.open("Computer_Scientists.txt");
-    return &CSstream;
-}
 
-void DataLayer::closeCSstream(ifstream& CSstream){
-    CSstream.close();
-}*/
+
 
 void DataLayer::read_from_file(){
     ifstream CSstream;
@@ -149,21 +142,7 @@ vector <ComputerScientist> DataLayer::findByYear(int year)
     return aliveThatYear;
 }
 
-/*void DataLayer::vectorToFile()
-{
-   for(unsigned int i = 0; i < CSstorer5000.size(); i++)
-   {
-           CSstorer5000[i].getFirstName();
-           CSstorer5000[i].getLastName();
-           CSstorer5000[i].getGender();
-           CSstorer5000[i].getYearOfBirth();
-           CSstorer5000[i].getYearOfDeath();
-   }
 
-    ofstream output_file("./Computer_Scientists.txt");
-    ostream_iterator<ComputerScientist> output_iterator(output_file, "\n");
-    copy(CSstorer5000.begin(), CSstorer5000.end(), output_iterator);
-}*/
 void DataLayer::vectorToFile()
 {
     ofstream vectorStream;
