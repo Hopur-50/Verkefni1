@@ -1,47 +1,51 @@
 #include "servicelayer.h"
 #include "ComputerScientist.h"
+#include "datalayer.h"
 
 ServiceLayer::ServiceLayer()
 {
 
 }
 
-ifstream ServiceLayer::openCSstream()
+/*ifstream ServiceLayer::openCSstream()
 {
     DataLayer.openCSstream();
 }
 
-void ServiceLayer::closeCSstream(ifstream CSstream)
+void ServiceLayer::closeCSstream(ifstream& CSstream)
 {
     DataLayer.closeCSstream(CSstream);
+}*/
+
+void ServiceLayer::read_from_file(DataLayer dl)
+{
+     dl.read_from_file();
 }
 
-void ServiceLayer::read_from_file()
+void sort_by_last(DataLayer dl)
 {
-     DataLayer.read_from_file();
+     dl.sort_by_last();
 }
 
-void sort_by_last()
+ComputerScientist ServiceLayer::findByName(DataLayer dl, string name)
 {
-     DataLayer.sort_by_last();
+     ComputerScientist nameguy(*dl.findByName(name)); //ætlaði að búa til copy ctor,
+     return nameguy;                                  //fattaði síðan að þetta mun ekki
+                                                      // virka, svo beil
 }
 
-ComputerScientist ServiceLayer::findByName(string name)
+vector <ComputerScientist> ServiceLayer::findByYear(DataLayer dl, int year)
 {
-     DataLayer.findByName(name);
+     vector <ComputerScientist> year_vec(dl.findByYear(year));
+     return year_vec;
 }
 
-vector <ComputerScientist> ServiceLayer::findByYear(int year)
+void ServiceLayer::sort_by_first(DataLayer dl)
 {
-     DataLayer.findByYear(year);
+    dl.sort_by_first();
 }
 
-void ServiceLayer::sort_by_first()
+int ServiceLayer::returnSizeOfVector(DataLayer dl)
 {
-    DataLayer.sort_by_first();
-}
-
-int ServiceLayer::returnSizeOfVector()
-{
-    return CSstorer5000.size();
+    return dl.get_vector_size();
 }
