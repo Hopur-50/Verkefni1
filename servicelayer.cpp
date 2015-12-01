@@ -1,4 +1,4 @@
-+#include "servicelayer.h"
+#include "servicelayer.h"
 #include "ComputerScientist.h"
 #include "datalayer.h"
 
@@ -50,12 +50,12 @@ int ServiceLayer::returnSizeOfVector()
     return dl.get_vector_size();
 }
 
-int ServiceLayer::sort_by_year_ascending()
+void ServiceLayer::sort_by_year_ascending()
 {
-    return dl.sort_by_year_ascending();
+    dl.sort_by_year_ascending();
 }
 
-int ServiceLayer::sort_by_year_descending()
+void ServiceLayer::sort_by_year_descending()
 {
-    return dl.sort_by_year_descending();
+    dl.sort_by_year_descending();
 }

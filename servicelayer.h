@@ -17,8 +17,8 @@ public:
     vector <ComputerScientist> findByYear(int year);
     void sort_by_first();
     int returnSizeOfVector();
-    int sort_by_year_ascending();
-    int sort_by_year_descending();
+    void sort_by_year_ascending();
+    void sort_by_year_descending();
 
 private:
     DataLayer dl;
