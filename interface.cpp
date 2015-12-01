@@ -36,7 +36,7 @@ void Interface::menu()//displays the initial menu for user
         cout << "Wrong input";
         menu();
     }
-    //bæta við einhverju til að klára?
+    //bæta við vectortofile
 }
 
 void Interface::addNew()

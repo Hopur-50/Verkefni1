@@ -1,11 +1,11 @@
 #include "ComputerScientist.h"
 #include<string>
 
-ComputerScientist::ComputerScientist(string first_name, string last_name, char sex, int birth, int death)
+ComputerScientist::ComputerScientist(string fName, string lName, char Sex, int birth, int death)
 {
-    first_name = first_name;
-    last_name = last_name;
-    sex = sex;
+    first_name = fName;
+    last_name = lName;
+    sex = Sex;
     year_of_birth = birth;
     year_of_death = death;
     //ctor

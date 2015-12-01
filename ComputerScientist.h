@@ -12,7 +12,7 @@ using namespace std;
 class ComputerScientist
 {
     public:
-        ComputerScientist(string first_name, string last_name, char sex, int birth, int death);
+        ComputerScientist(string fName, string lName, char Sex, int birth, int death);
         ~ComputerScientist();
         string getFirstName();
         string getLastName();

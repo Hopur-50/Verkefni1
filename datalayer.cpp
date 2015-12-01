@@ -149,7 +149,7 @@ vector <ComputerScientist> DataLayer::findByYear(int year)
     return aliveThatYear;
 }
 
-void DataLayer::vectorToFile()
+/*void DataLayer::vectorToFile()
 {
    for(unsigned int i = 0; i < CSstorer5000.size(); i++)
    {
@@ -163,4 +163,18 @@ void DataLayer::vectorToFile()
     ofstream output_file("./Computer_Scientists.txt");
     ostream_iterator<ComputerScientist> output_iterator(output_file, "\n");
     copy(CSstorer5000.begin(), CSstorer5000.end(), output_iterator);
+}*/
+void DataLayer::vectorToFile()
+{
+    ofstream vectorStream;
+    vectorStream.open("Computer_Scientists.txt", std::ofstream::trunc | std::ofstream::app);
+    for(unsigned int i = 0; i < CSstorer5000.size(); i++)
+    {
+
+           vectorStream  << CSstorer5000[i].getFirstName()    << ";"
+                         << CSstorer5000[i].getLastName()     << ";"
+                         << CSstorer5000[i].getGender()       << ";"
+                         << CSstorer5000[i].getYearOfBirth()  << ";"
+                         << CSstorer5000[i].getYearOfDeath()  << endl;
+    }
 }
