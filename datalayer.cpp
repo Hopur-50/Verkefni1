@@ -6,15 +6,7 @@ DataLayer::DataLayer()
     current_sort = LAST_NAME;
 }
 //data
-/*ifstream* DataLayer::openCSstream(){
-    ifstream CSstream;
-    CSstream.open("Computer_Scientists.txt");
-    return &CSstream;
-}
 
-void DataLayer::closeCSstream(ifstream& CSstream){
-    CSstream.close();
-}*/
 
 void DataLayer::read_from_file(){
     ifstream CSstream;
@@ -41,6 +33,10 @@ int DataLayer::get_vector_size()
 {
     return CSstorer5000.size();
 
+}
+vector<ComputerScientist> DataLayer::getVector()
+{
+    return CSstorer5000;
 }
 
 void DataLayer::sort_vector()

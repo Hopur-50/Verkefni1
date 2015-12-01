@@ -15,10 +15,9 @@ class DataLayer
 {
 public:
     DataLayer();
-   // ifstream* openCSstream();
-    //void closeCSstream(ifstream& CSstream);
     void printAll();
     int get_vector_size();
+    vector<ComputerScientist> getVector();
     void read_from_file();
     void sort_vector();
     void sort_by_last();

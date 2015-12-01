@@ -20,11 +20,6 @@ public:
     void deleteInfo();*/
 
 private:
-    string firstName;
-    string lastName;
-    int yob;
-    int yod;
-    char gender;
     ServiceLayer sl;
 };
 

@@ -46,23 +46,24 @@ void Interface::addNew()
     int yob, yod;
     cout << "Please fill in the fields below\n";
     cout << "First name: ";
-        cin >> firstName;
+    cin >> firstName;
     cout << "Last name: ";
-        cin >> lastName;
+    cin >> lastName;
     cout << "What is your gender?" << endl;
     cout << "m for male" << endl;
     cout << "f for female" << endl;
     cout << "o for other" << endl;
-        cin >> gender;
+    cin >> gender;
     cout << "Year of birth: ";
-        cin >> yob;
+    cin >> yob;
     cout << "Year of death, if the person is still alive enter 0\n";
-        cin >> yod;
+    cin >> yod;
     //ComputerScientist newGuy(firstName,lastName,gender,yob,yod);
 
     //call functions from datalayer to get info from user
 
 }
+
 
 void Interface::displayList()
 {
@@ -71,11 +72,12 @@ void Interface::displayList()
 
     for(int i = 0; i < vectorSize; i++)
     {
+        vector<ComputerScientist> tempVec=sl.getCS();
         cout << i+1 << ":\t"
-             << "Name: " << firstName << " " << lastName << "\t"
-             << "Sex: " << gender << "\t"
-             << "Year of birth: " << yob << "\t"
-             << "Year of death: " << yod << endl;
+             << "Name: " << tempVec[i].getFirstName() << " " << tempVec[i].getLastName() << "\t"
+             << "Sex: " << tempVec[i].getGender() << "\t"
+             << "Year of birth: " << tempVec[i].getYearOfBirth() << "\t"
+             << "Year of death: " << tempVec[i].getYearOfDeath() << endl;
     }
 
     cout << endl;

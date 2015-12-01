@@ -12,6 +12,7 @@ public:
     /*ifstream openCSstream();
     void closeCSstream(ifstream &CSstream);*/
     void printAll();
+    vector <ComputerScientist> getCS();
     void read_from_file();
     void sort_by_last();
     ComputerScientist* findByName(string name);

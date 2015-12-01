@@ -7,19 +7,14 @@ ServiceLayer::ServiceLayer()
 
 }
 
-/*ifstream ServiceLayer::openCSstream()
-{
-    DataLayer.openCSstream();
-}
-
-void ServiceLayer::closeCSstream(ifstream& CSstream)
-{
-    DataLayer.closeCSstream(CSstream);
-}*/
 
 void ServiceLayer::read_from_file()
 {
      dl.read_from_file();
+}
+vector<ComputerScientist> ServiceLayer::getCS()
+{
+    return dl.getVector();
 }
 
 void ServiceLayer::sort_by_last()
