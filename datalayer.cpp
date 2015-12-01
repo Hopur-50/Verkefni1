@@ -106,13 +106,13 @@ void DataLayer::sort_by_year_descending()
     sort(CSstorer5000.begin(), CSstorer5000.end(), sort_year_desc);
 }
 
-ComputerScientist DataLayer::findByName(string name)
+ComputerScientist* DataLayer::findByName(string name)
 {
     for (unsigned int i = 0; i < CSstorer5000.size(); i++)
     {
         if(CSstorer5000[i].getFirstName() == name || CSstorer5000[i].getLastName() == name)
         {
-             return CSstorer5000[i];
+             return &CSstorer5000[i];
         }
     }
 
