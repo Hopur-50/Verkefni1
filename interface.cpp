@@ -84,6 +84,23 @@ void Interface::displayList()
     cout << endl;
 }
 
+void Interface::displayVector(vector<ComputerScientist> vec)
+{
+    for(unsigned int i = 0; i < vec.size(); i++)
+    {
+        cout << i+1 << ":\n";
+        printCS(vec[i]);
+    }
+}
+
+void Interface::printCS(ComputerScientist cs)
+{
+    cout << "Name: " << cs.getFirstName() << " " << cs.getLastName() << "\t"
+         << "Sex: " << cs.getGender() << "\t"
+         << "Year of birth: " << cs.getYearOfBirth() << "\t"
+         << "Year of death: " << cs.getYearOfDeath() << endl;
+}
+
 
 void Interface::selectOrder()
 {
