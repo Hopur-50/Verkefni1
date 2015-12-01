@@ -15,7 +15,7 @@ class DataLayer
 {
 public:
     DataLayer();
-    void printAll();
+    void addNew(ComputerScientist cs);
     int get_vector_size();
     vector<ComputerScientist> getVector();
     void read_from_file();

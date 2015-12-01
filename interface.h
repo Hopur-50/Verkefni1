@@ -15,7 +15,8 @@ public:
     void displayList();
     void selectOrder();
     void search();
-    void printAll();
+    void displayVector(vector<ComputerScientist> vec);
+    void printCS(ComputerScientist cs);
 
 private:
     ServiceLayer sl;

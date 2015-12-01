@@ -7,6 +7,11 @@ ServiceLayer::ServiceLayer()
 
 }
 
+void ServiceLayer::addNew(ComputerScientist cs)
+{
+    dl.addNew(cs);
+}
+
 void ServiceLayer::read_from_file()
 {
      dl.read_from_file();
