@@ -1,1 +1,10 @@
-Alan;Turing;1912;1954
+Alan;Turing;m;1912;1954
+Donald;Knuth;m;1938;0
+Grace;Hopper;f;1906;1992
+Edsger;Dijkstra;m;1930;2002
+Augusta;Ada;f;1815;1853
+Lawrence;Page;m;1973;0
+Anita;Borg;f;1949;2003
+Adele;Goldber;f;1945;0
+George;Bool;m;1815;1864
+Sergey;Brin;m;1973;0
