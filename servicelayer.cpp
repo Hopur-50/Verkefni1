@@ -7,10 +7,6 @@ ServiceLayer::ServiceLayer()
 
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> cc3d81936046f4947d28e657b5c11bb5c91314dc
 void ServiceLayer::read_from_file()
 {
      dl.read_from_file();

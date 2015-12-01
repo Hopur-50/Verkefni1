@@ -50,7 +50,7 @@ void Interface::addNew()
     cin >> firstName;
     cout << "Last name: ";
     cin >> lastName;
-    cout << "What is your gender?" << endl;
+    cout << "Gender?" << endl;
     cout << "m for male" << endl;
     cout << "f for female" << endl;
     cout << "o for other" << endl;
@@ -58,15 +58,8 @@ void Interface::addNew()
     cout << "Year of birth: ";
     cin >> yob;
     cout << "Year of death, if the person is still alive enter 0\n";
-<<<<<<< HEAD
-    cin >> yod;
-    //ComputerScientist newGuy(firstName,lastName,gender,yob,yod);
-=======
-        cin >> yod;
 
      ComputerScientist newGuy(firstName,lastName,gender,yob,yod);
->>>>>>> cc3d81936046f4947d28e657b5c11bb5c91314dc
-
     //call functions from datalayer to get info from user
 
 }
@@ -79,20 +72,12 @@ void Interface::displayList()
 
     for(int i = 0; i < vectorSize; i++)
     {
-<<<<<<< HEAD
         vector<ComputerScientist> tempVec=sl.getCS();
         cout << i+1 << ":\t"
              << "Name: " << tempVec[i].getFirstName() << " " << tempVec[i].getLastName() << "\t"
              << "Sex: " << tempVec[i].getGender() << "\t"
              << "Year of birth: " << tempVec[i].getYearOfBirth() << "\t"
              << "Year of death: " << tempVec[i].getYearOfDeath() << endl;
-=======
-        cout << i+1 << ":\t";
-//             << "Name: " << firstName << " " << lastName << "\t"
-//             << "Sex: " << gender << "\t"
-//             << "Year of birth: " << yob << "\t"
-//             << "Year of death: " << yod << endl;
->>>>>>> cc3d81936046f4947d28e657b5c11bb5c91314dc
     }
 
     cout << endl;
