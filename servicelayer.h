@@ -14,8 +14,6 @@ class ServiceLayer
 
 public:
     ServiceLayer();
-    /*ifstream openCSstream();
-    void closeCSstream(ifstream &CSstream);*/
     void printAll();
     void read_from_file();
     void sort_by_last();
@@ -28,8 +26,6 @@ public:
 
 private:
     DataLayer dl;
-
-
 };
 
 #endif // SERVICELAYER_H

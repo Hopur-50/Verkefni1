@@ -15,8 +15,6 @@ class DataLayer
 {
 public:
     DataLayer();
-   // ifstream* openCSstream();
-    //void closeCSstream(ifstream& CSstream);
     void printAll();
     int get_vector_size();
     void read_from_file();

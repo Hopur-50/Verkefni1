@@ -21,15 +21,8 @@ public:
     void selectOrder();
     void search();
     void printAll();
-   /* void edit();
-    void deleteInfo();*/
 
 private:
-    string firstName;
-    string lastName;
-    int yob;
-    int yod;
-    char gender;
     ServiceLayer sl;
 };
 

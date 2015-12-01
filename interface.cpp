@@ -44,6 +44,7 @@ void Interface::addNew()
     string firstName, lastName;
     char gender;
     int yob, yod;
+
     cout << "Please fill in the fields below\n";
     cout << "First name: ";
         cin >> firstName;
@@ -58,7 +59,8 @@ void Interface::addNew()
         cin >> yob;
     cout << "Year of death, if the person is still alive enter 0\n";
         cin >> yod;
-    //ComputerScientist newGuy(firstName,lastName,gender,yob,yod);
+
+     ComputerScientist newGuy(firstName,lastName,gender,yob,yod);
 
     //call functions from datalayer to get info from user
 
@@ -71,15 +73,16 @@ void Interface::displayList()
 
     for(int i = 0; i < vectorSize; i++)
     {
-        cout << i+1 << ":\t"
-             << "Name: " << firstName << " " << lastName << "\t"
-             << "Sex: " << gender << "\t"
-             << "Year of birth: " << yob << "\t"
-             << "Year of death: " << yod << endl;
+        cout << i+1 << ":\t";
+//             << "Name: " << firstName << " " << lastName << "\t"
+//             << "Sex: " << gender << "\t"
+//             << "Year of birth: " << yob << "\t"
+//             << "Year of death: " << yod << endl;
     }
 
     cout << endl;
 }
+
 
 void Interface::selectOrder()
 {
