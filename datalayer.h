@@ -17,7 +17,7 @@ public:
     ifstream openCSstream();
     void closeCSstream(ifstream CSstream);
     void printAll();
-    void read_from_file();
+    void read_from_file(ifstream& CSstream);
     void sort_by_last();
     void sort_by_first();
     void sort_by_year_ascending();

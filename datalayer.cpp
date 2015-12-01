@@ -15,8 +15,8 @@ void DataLayer::closeCSstream(ifstream CSstream){
     CSstream.close();
 }
 
-void DataLayer::read_from_file(){
-    ifstream CSstream = openCSstream();
+void DataLayer::read_from_file(ifstream& CSstream){
+   // ifstream CSstream = openCSstream();
     while(CSstream){
         string str;
         string first_name;
