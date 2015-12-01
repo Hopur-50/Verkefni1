@@ -1,11 +1,5 @@
 #include "datalayer.h"
 #include "ComputerScientist.h"
-#include <fstream>
-#include <sstream>
-#include <iostream>
-#include <string>
-#include <vector>
-#include <algorithm>
 
 DataLayer::DataLayer()
 {
@@ -13,7 +7,10 @@ DataLayer::DataLayer()
 }
 //data
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cea00b153f789995df79aa02a68ad907fb9047e0
 
 void DataLayer::read_from_file(){
     ifstream CSstream;
@@ -40,6 +37,16 @@ int DataLayer::get_vector_size()
 {
     return CSstorer5000.size();
 
+}
+vector<ComputerScientist> DataLayer::getVector()
+{
+    return CSstorer5000;
+}
+
+void DataLayer::change_sort_order(int n)
+{
+    current_sort = n;
+    sort_vector();
 }
 
 void DataLayer::sort_vector()

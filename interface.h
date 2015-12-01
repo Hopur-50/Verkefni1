@@ -1,11 +1,6 @@
 #ifndef INTERFACE_H
 #define INTERFACE_H
-#include <fstream>
-#include <sstream>
-#include <iostream>
-#include <string>
-#include <vector>
-#include <algorithm>
+
 #include "ComputerScientist.h"
 #include "servicelayer.h"
 
@@ -21,15 +16,8 @@ public:
     void selectOrder();
     void search();
     void printAll();
-   /* void edit();
-    void deleteInfo();*/
 
 private:
-    string firstName;
-    string lastName;
-    int yob;
-    int yod;
-    char gender;
     ServiceLayer sl;
 };
 

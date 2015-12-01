@@ -11,28 +11,19 @@ void ServiceLayer::read_from_file()
 {
      dl.read_from_file();
 }
-
-void ServiceLayer::sort_by_last()
+vector<ComputerScientist> ServiceLayer::getCS()
 {
-     dl.sort_by_last();
+    return dl.getVector();
 }
 
-ComputerScientist ServiceLayer::findByName(string name)
+ComputerScientist* ServiceLayer::findByName(string name)
 {
-     ComputerScientist nameguy(*dl.findByName(name)); //ætlaði að búa til copy ctor,
-     return nameguy;                                  //fattaði síðan að þetta mun ekki
-                                                      // virka, svo beil
+     return dl.findByName(name);
 }
 
 vector <ComputerScientist> ServiceLayer::findByYear(int year)
 {
-     vector <ComputerScientist> year_vec(dl.findByYear(year));
-     return year_vec;
-}
-
-void ServiceLayer::sort_by_first()
-{
-    dl.sort_by_first();
+     return dl.findByYear(year);
 }
 
 int ServiceLayer::returnSizeOfVector()
@@ -40,12 +31,7 @@ int ServiceLayer::returnSizeOfVector()
     return dl.get_vector_size();
 }
 
-void ServiceLayer::sort_by_year_ascending()
+void ServiceLayer::change_sort_order(int n)
 {
-    dl.sort_by_year_ascending();
-}
-
-void ServiceLayer::sort_by_year_descending()
-{
-    dl.sort_by_year_descending();
+    dl.change_sort_order(n);
 }

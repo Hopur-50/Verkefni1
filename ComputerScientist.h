@@ -1,11 +1,7 @@
 #ifndef COMPUTERSCIENTIST_H
 #define COMPUTERSCIENTIST_H
-#include <fstream>
-#include <sstream>
-#include <iostream>
+
 #include <string>
-#include <vector>
-#include <algorithm>
 
 using namespace std;
 
@@ -13,7 +9,6 @@ class ComputerScientist
 {
     public:
         ComputerScientist(string fName, string lName, char Sex, int birth, int death);
-        ~ComputerScientist();
         string getFirstName();
         string getLastName();
         char getGender();
