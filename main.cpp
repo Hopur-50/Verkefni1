@@ -11,11 +11,11 @@ int main()
     Interface message;
     message.menu();
 
-    int exit = 0;
-    while(exit != 1) {
+    int number = 0;
+    while(number != 1) {
         message.addNew();
         cout << "Press 1 to quit or 0 to continue"
-        cin >> exit;
+        cin >> number;
     }
     return 0;
 }
