@@ -36,7 +36,7 @@ void DataLayer::read_from_file(){
     sort_vector();
     CSstream.open("Computer_Scientists.txt");
 }
-int get_vector_size()
+int DataLayer::get_vector_size()
 {
     return CSstorer5000.size();
 
@@ -160,7 +160,7 @@ vector <ComputerScientist> DataLayer::findByYear(int year)
    }
 
    // vector<ComputerScientist> CSstorer5000;
-    ofstream output_file("./example.txt");
+    ofstream output_file("./Computer_Scientists.txt");
     ostream_iterator<ComputerScientist> output_iterator(output_file, "\n");
     copy(CSstorer5000.begin(), CSstorer5000.end(), output_iterator);
 }*/

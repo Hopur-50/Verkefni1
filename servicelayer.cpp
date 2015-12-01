@@ -52,10 +52,10 @@ int ServiceLayer::returnSizeOfVector()
 
 int ServiceLayer::sort_by_year_ascending()
 {
-    return dl.sort_by_year_ascending();
+    dl.sort_by_year_ascending();
 }
 
 int ServiceLayer::sort_by_year_descending()
 {
-    return dl.sort_by_year_descending();
+    dl.sort_by_year_descending();
 }
