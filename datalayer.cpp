@@ -36,7 +36,7 @@ void DataLayer::read_from_file(){
     sort_vector();
     CSstream.open("Computer_Scientists.txt");
 }
-int get_vector_size()
+int DataLayer::get_vector_size()
 {
     return CSstorer5000.size();
 
