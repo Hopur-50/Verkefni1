@@ -18,6 +18,7 @@ public:
     void closeCSstream(ifstream CSstream);
     void printAll();
     void read_from_file(ifstream& CSstream);
+    void sort_vector();
     void sort_by_last();
     void sort_by_first();
     void sort_by_year_ascending();
@@ -29,6 +30,7 @@ public:
 
 private:
     vector<ComputerScientist> CSstorer5000;
+    int current_sort;
 };
 
 #endif // DATALAYER_H
