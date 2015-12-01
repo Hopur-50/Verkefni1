@@ -24,8 +24,8 @@ void DataLayer::printAll(){
 }
 
 void DataLayer::read_from_file(){
-
-    while(openCSstream()){
+    ifstream CSstream = openCSstream();
+    while(CSstream){
         string str;
         string first_name;
         string last_name;
@@ -33,30 +33,12 @@ void DataLayer::read_from_file(){
         int yob;
         int yod;
         getline(CSstream, str, ';');
-        while (str >> first_name >> last_name >> sex >> yob >> yod)
+        /*while (str >> first_name >> last_name >> sex >> yob >> yod)
         {
             ComputerScientist CStemp(first_name, last_name, sex, yob, yod);
             CSstorer5000.push_back(CStemp);
+        }*/
         }
-        }
-}
-
-void DataLayer::addNewInfo()
-{
-    for (int i = 0; i < 1; i++)
-    {
-        cout << "Name: ";
-        cin  >> CSstorer5000[i].first_name;
-             >> CSstorer5000[i].last_name;
-        cout >> "Sex: ";
-        cin  >> CSstorer5000[i].sex;
-        cout << "Year of birth: ";
-        cin  >> CSstorer5000[i].year_of_birth;
-        cout << "Year of death: (write 0 if still alive)";
-        cin  >> CSstorer5000[i].year_of_death;
-        cout << endl;
-    }
-
 }
 
 void DataLayer::sort_by_last()
@@ -71,7 +53,7 @@ void DataLayer::sort_by_last()
             return false;
         }
     };
-    sort(CSstorer5000.begin(), CSstorer5000.end(), sort_last_name);
+    sort(CSstorer5000.begin(), CSstorer5000.end(), sort_last_name());
 }
 
 void DataLayer::sort_by_first()
@@ -86,7 +68,7 @@ void DataLayer::sort_by_first()
             return false;
         }
     };
-    sort(CSstorer5000.begin(), CSstorer5000.end(), sort_first_name);
+    sort(CSstorer5000.begin(), CSstorer5000.end(), sort_first_name());
 }
 
 void sort_by_year_ascending()
@@ -98,7 +80,7 @@ void sort_by_year_ascending()
             return cs1.getYearOfBirth() < cs2.getYearOfBirth();
         }
     };
-    sort(CSstorer5000.begin(), CSstorer5000.end(), year_asc);
+    sort(CSstorer5000.begin(), CSstorer5000.end(), year_asc());
 }
 
 void sort_by_year_descending()
@@ -110,5 +92,5 @@ void sort_by_year_descending()
             return cs2.getYearOfBirth() < cs1.getYearOfBirth();
         }
     };
-    sort(CSstorer5000.begin(), CSstorer5000.end(), year_desc);
+    sort(CSstorer5000.begin(), CSstorer5000.end(), year_desc());
 }

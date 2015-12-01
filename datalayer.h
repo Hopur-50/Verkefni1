@@ -4,9 +4,11 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <algorithm>
 #include "ComputerScientist.h"
 using namespace std;
 
+enum Sort {LAST_NAME, FIRST_NAME, YEAR_ASC, YEAR_DESC};
 
 class DataLayer
 {
