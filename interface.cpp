@@ -2,8 +2,9 @@
 
 Interface::Interface()
 {
-
+    vectorToFile();
 }
+
 void Interface::menu(int& userChoice)//displays the initial menu for user
 {
     cout << "Choose a number from the menu" << endl;
@@ -34,7 +35,6 @@ void Interface::menu(int& userChoice)//displays the initial menu for user
         cout << "Wrong input";
         break;
     }
-    vectorToFile();
 }
 
 void Interface::addNew()
@@ -59,12 +59,7 @@ void Interface::addNew()
     cin >> yod;
 
     ComputerScientist newGuy(firstName,lastName,gender,yob,yod);
-<<<<<<< HEAD
-    sl.addToVec(newGuy);
-
-=======
     sl.addNew(newGuy);
->>>>>>> 137df71d0253da2d45d3b96411e1f599043aaa43
 }
 
 void Interface::displayList()
