@@ -78,8 +78,8 @@ void Interface::selectOrder()
 {
     int userChoice;
     cout << "Which order would you like to retrieve list items in?" << endl;
-    cout << "Choose 1 for a list in alphabetical order by last name" << endl;
-    cout << "Choose 2 for a list in alphabetical order by first name" << endl;
+    cout << "Choose 1 for a list of last names in alphabetical order" << endl;
+    cout << "Choose 2 for a list of first names in alphabetical order" << endl;
     cout << "Choose 3 for a list by date of birth in ascending order" << endl;
     cout << "Choose 4 for a list by date of birth in descending order" << endl;
     cin >> userChoice;
