@@ -1,5 +1,4 @@
 #include "interface.h"
-#include "servicelayer.h"
 
 Interface::Interface()
 {
@@ -60,11 +59,9 @@ void Interface::addNew()
     cout << "Year of death, if the person is still alive enter 0\n";
     cin >> yod;
 
-     ComputerScientist newGuy(firstName,lastName,gender,yob,yod);
-    //call functions from datalayer to get info from user
-
+    ComputerScientist newGuy(firstName,lastName,gender,yob,yod);
+    sl.addNew(newGuy);
 }
-
 
 void Interface::displayList()
 {
@@ -80,7 +77,6 @@ void Interface::displayList()
              << "Year of birth: " << tempVec[i].getYearOfBirth() << "\t"
              << "Year of death: " << tempVec[i].getYearOfDeath() << endl;
     }
-
     cout << endl;
 }
 

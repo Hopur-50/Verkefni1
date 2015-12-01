@@ -1,5 +1,4 @@
 #include "datalayer.h"
-#include "ComputerScientist.h"
 
 DataLayer::DataLayer()
 {
@@ -29,6 +28,13 @@ void DataLayer::read_from_file(){
     sort_vector();
     CSstream.open("Computer_Scientists.txt");
 }
+
+void DataLayer::addNew(ComputerScientist cs)
+{
+    CSstorer5000.push_back(cs);
+    sort_vector();
+}
+
 int DataLayer::get_vector_size()
 {
     return CSstorer5000.size();
