@@ -13,7 +13,6 @@ class ComputerScientist
 {
     public:
         ComputerScientist(string fName, string lName, char Sex, int birth, int death);
-        ComputerScientist(ComputerScientist& copee);
         string getFirstName();
         string getLastName();
         char getGender();

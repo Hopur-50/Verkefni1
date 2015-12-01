@@ -34,8 +34,7 @@ ComputerScientist* ServiceLayer::findByName(string name)
 
 vector <ComputerScientist> ServiceLayer::findByYear(int year)
 {
-     vector <ComputerScientist> year_vec(dl.findByYear(year));
-     return year_vec;
+     return dl.findByYear(year);
 }
 
 void ServiceLayer::sort_by_first()
