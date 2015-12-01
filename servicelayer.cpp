@@ -27,11 +27,9 @@ void ServiceLayer::sort_by_last()
      dl.sort_by_last();
 }
 
-ComputerScientist ServiceLayer::findByName(string name)
+ComputerScientist* ServiceLayer::findByName(string name)
 {
-     ComputerScientist nameguy(*dl.findByName(name)); //ætlaði að búa til copy ctor,
-     return nameguy;                                  //fattaði síðan að þetta mun ekki
-                                                      // virka, svo beil
+     return dl.findByName(name);
 }
 
 vector <ComputerScientist> ServiceLayer::findByYear(int year)
