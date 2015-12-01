@@ -9,13 +9,13 @@ void Interface::menu()//displays the initial menu for user
 {
     int userChoice;
     cout << "Choose a number from the menu" << endl;
+    cout << "-----------------------------" << endl;
     cout << "Choose 1 to add new item to database" << endl;
     cout << "Choose 2 to display all info" << endl;
     cout << "Choose 3 to arrange list" << endl;
     cout << "Choose 4 to search for a name" << endl;
     cout << "Choose 5 to quit the program" << endl;
-            //cout << "4. Edit" << endl;
-            //cout << "5. Delete" << endl;
+
     cin >> userChoice;
     switch (userChoice) {
     case 1:
@@ -46,15 +46,18 @@ void Interface::addNew()
     int yob, yod;
     cout << "Please fill in the fields below\n";
     cout << "First name: ";
-    cin >> firstName;
+        cin >> firstName;
     cout << "Last name: ";
-    cin >> lastName;
-    cout << "Gender, m for male and f for female, o for other:";
-    cin >> gender;
+        cin >> lastName;
+    cout << "What is your gender?" << endl;
+    cout << "m for male" << endl;
+    cout << "f for female" << endl;
+    cout << "o for other" << endl;
+        cin >> gender;
     cout << "Year of birth: ";
-    cin >> yob;
-    cout << "Year of death, if person is still alive enter 0\n";
-    cin >> yod;
+        cin >> yob;
+    cout << "Year of death, if the person is still alive enter 0\n";
+        cin >> yod;
     //ComputerScientist newGuy(firstName,lastName,gender,yob,yod);
 
     //call functions from datalayer to get info from user
@@ -82,6 +85,7 @@ void Interface::selectOrder()
 {
     int userChoice;
     cout << "Which order would you like to retrieve list items in?" << endl;
+    cout << "-----------------------------------------------------" << endl;
     cout << "Choose 1 for a list of last names in alphabetical order" << endl;
     cout << "Choose 2 for a list of first names in alphabetical order" << endl;
     cout << "Choose 3 for a list by date of birth in ascending order" << endl;
@@ -109,6 +113,7 @@ void Interface::search()
     int userChoice,year;
     string name;
     cout << "Search options" << endl;
+    cout << "---------------" << endl;
     cout << "Choose 1 to search by name" << endl;
     cout << "Choose 2 to search by year" << endl;
     cin >> userChoice;
