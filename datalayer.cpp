@@ -2,7 +2,7 @@
 
 DataLayer::DataLayer()
 {
-
+    current_sort = LAST_NAME;
 }
 //data
 ifstream DataLayer::openCSstream(){
@@ -31,6 +31,32 @@ void DataLayer::read_from_file(){
             ComputerScientist CStemp(first_name, last_name, sex, yob, yod);
             CSstorer5000.push_back(CStemp);
         }
+    }
+}
+
+void DataLayer::sort_vector()
+{
+    switch (current_sort)
+    {
+        case LAST_NAME:
+            sort_by_last();
+        break;
+
+        case FIRST_NAME:
+            sort_by_first();
+        break;
+
+        case YEAR_ASC:
+            sort_by_year_ascending();
+        break;
+
+        case YEAR_DESC:
+            sort_by_year_descending();
+        break;
+
+        default:
+            sort_by_last();
+        break;
     }
 }
 
