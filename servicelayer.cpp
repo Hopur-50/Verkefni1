@@ -44,7 +44,4 @@ void ServiceLayer::vectorToFile()
 {
     dl.vectorToFile();
 }
-void ServiceLayer::addToVec(ComputerScientist newGuy)
-{
-    dl.addToVec(newGuy);
-}
+

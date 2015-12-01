@@ -59,12 +59,7 @@ void Interface::addNew()
     cin >> yod;
 
     ComputerScientist newGuy(firstName,lastName,gender,yob,yod);
-<<<<<<< HEAD
-    sl.addToVec(newGuy);
-
-=======
     sl.addNew(newGuy);
->>>>>>> 137df71d0253da2d45d3b96411e1f599043aaa43
 }
 
 void Interface::displayList()

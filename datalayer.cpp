@@ -172,8 +172,3 @@ void DataLayer::vectorToFile()
     }
     vectorStream.close();
 }
-void DataLayer::addToVec(ComputerScientist newGuy)
-{
-    CSstorer5000.push_back(newGuy);
-    sort_vector();
-}
