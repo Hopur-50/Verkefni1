@@ -10,10 +10,14 @@ ComputerScientist::ComputerScientist(string fName, string lName, char Sex, int b
     year_of_death = death;
     //ctor
 }
-
-ComputerScientist::~ComputerScientist()
+ComputerScientist::ComputerScientist(ComputerScientist& copee)
 {
-    //dtor
+    first_name = copee.getFirstName();
+    last_name = copee.getLastName();
+    sex = copee.getGender();
+    year_of_birth = copee.getYearOfBirth();
+    year_of_death = copee.getYearOfDeath();
+    //copy ctor
 }
 
 string ComputerScientist::getFirstName()
