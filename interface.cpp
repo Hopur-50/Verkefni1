@@ -2,8 +2,9 @@
 
 Interface::Interface()
 {
-
+    vectorToFile();
 }
+
 void Interface::menu(int& userChoice)//displays the initial menu for user
 {
     cout << "Choose a number from the menu" << endl;
@@ -34,7 +35,6 @@ void Interface::menu(int& userChoice)//displays the initial menu for user
         cout << "Wrong input";
         break;
     }
-    vectorToFile();
 }
 
 void Interface::addNew()
@@ -63,7 +63,6 @@ void Interface::addNew()
     sl.addNew(newGuy);
 
 }
-
 void Interface::displayList()
 {
     int vectorSize;
