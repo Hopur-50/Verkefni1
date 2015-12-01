@@ -5,18 +5,19 @@ DataLayer::DataLayer()
     current_sort = LAST_NAME;
 }
 //data
-ifstream DataLayer::openCSstream(){
+/*ifstream* DataLayer::openCSstream(){
     ifstream CSstream;
     CSstream.open("Computer_Scientists.txt");
-    return CSstream;
+    return &CSstream;
 }
 
 void DataLayer::closeCSstream(ifstream& CSstream){
     CSstream.close();
-}
+}*/
 
-void DataLayer::read_from_file(ifstream& CSstream){
-   // ifstream CSstream = openCSstream();
+void DataLayer::read_from_file(){
+    ifstream CSstream;
+    CSstream.open("Computer_Scientists.txt");
     while(CSstream){
         string str;
         string first_name;
@@ -33,6 +34,11 @@ void DataLayer::read_from_file(ifstream& CSstream){
         }
     }
     sort_vector();
+    CSstream.open("Computer_Scientists.txt");
+}
+int get_vector_size()
+{
+    return CSstorer5000.size();
 }
 
 void DataLayer::sort_vector()
@@ -61,7 +67,7 @@ void DataLayer::sort_vector()
     }
 }
 
-bool sort_last_name(ComputerScientist& cs1, ComputerScientist& cs2)
+bool sort_last_name(ComputerScientist cs1, ComputerScientist cs2)
 {
     string name1 = cs1.getLastName();
     string name2 = cs2.getLastName();
@@ -74,7 +80,7 @@ void DataLayer::sort_by_last()
     sort(CSstorer5000.begin(), CSstorer5000.end(), sort_last_name);
 }
 
-bool sort_first_name(ComputerScientist& cs1, ComputerScientist& cs2)
+bool sort_first_name(ComputerScientist cs1, ComputerScientist cs2)
 {
     string name1 = cs1.getFirstName();
     string name2 = cs2.getFirstName();
@@ -87,7 +93,7 @@ void DataLayer::sort_by_first()
     sort(CSstorer5000.begin(), CSstorer5000.end(), sort_first_name);
 }
 
-bool sort_year_asc(ComputerScientist& cs1, ComputerScientist& cs2)
+bool sort_year_asc(ComputerScientist cs1, ComputerScientist cs2)
 {
     return cs1.getYearOfBirth() < cs2.getYearOfBirth();
 }
@@ -97,7 +103,7 @@ void DataLayer::sort_by_year_ascending()
     sort(CSstorer5000.begin(), CSstorer5000.end(), sort_year_asc);
 }
 
-bool sort_year_desc(ComputerScientist& cs1, ComputerScientist& cs2)
+bool sort_year_desc(ComputerScientist cs1, ComputerScientist cs2)
 {
     return cs2.getYearOfBirth() < cs1.getYearOfBirth();
 }
@@ -117,7 +123,7 @@ ComputerScientist* DataLayer::findByName(string name)
         }
     }
 
-    return NULL;
+    return 0;
 }
 
 vector <ComputerScientist> DataLayer::findByYear(int year)
