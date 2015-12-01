@@ -123,7 +123,7 @@ void Interface::search()
     cout << "Choose one of the following numbers:" << endl;
     cout << "------------------------------------" << endl;
     cout << "1 to search by name" << endl;
-    cout << "2 to check whom of the computer scientist were alive that year" << endl;
+    cout << "2 to check which of the computer scientists were alive the chosen year" << endl;
     cin >> userChoice;
     switch (userChoice) {
     case 1:
