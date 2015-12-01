@@ -1,11 +1,5 @@
 #include "datalayer.h"
 #include "ComputerScientist.h"
-#include <fstream>
-#include <sstream>
-#include <iostream>
-#include <string>
-#include <vector>
-#include <algorithm>
 
 DataLayer::DataLayer()
 {
@@ -47,6 +41,12 @@ int DataLayer::get_vector_size()
 {
     return CSstorer5000.size();
 
+}
+
+void DataLayer::change_sort_order(int n)
+{
+    current_sort = n;
+    sort_vector();
 }
 
 void DataLayer::sort_vector()

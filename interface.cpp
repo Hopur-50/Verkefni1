@@ -95,20 +95,10 @@ void Interface::selectOrder()
     cout << "3 for a list sorted by date of birth in ascending order" << endl;
     cout << "4 for a list sorted by date of birth in descending order" << endl;
     cin >> userChoice;
-    switch (userChoice) {
-    case 1:
-        sl.sort_by_last();
-    case 2:
-        sl.sort_by_first();
-        break;
-    case 3:
-        sl.sort_by_year_ascending();
-        break;
-    case 4:
-        sl.sort_by_year_descending();
-        break;
-    default:
-        break;
+    if(userChoice > 0 && userChoice < 5) sl.change_sort_order(userChoice);
+    else {
+        cout << "Wrong input";
+        selectOrder();
     }
 }
 
