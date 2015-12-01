@@ -14,7 +14,7 @@ int main()
     int number = 0;
     while(number != 1) {
         message.addNew();
-        cout << "Press 1 to quit or 0 to continue"
+        cout << "Press 1 to quit or 0 to continue";
         cin >> number;
     }
     return 0;
