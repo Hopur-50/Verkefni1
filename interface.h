@@ -10,12 +10,13 @@ class Interface
 {
 public:
     Interface();
-    void menu();
+    void menu(int& userchoice);
     void addNew();
     void displayList();
     void selectOrder();
     void search();
     void printAll();
+    void vectorToFile();
 
 private:
     ServiceLayer sl;

@@ -27,7 +27,7 @@ void DataLayer::read_from_file(){
         }
     }
     sort_vector();
-    CSstream.open("Computer_Scientists.txt");
+    CSstream.close();
 }
 int DataLayer::get_vector_size()
 {
@@ -159,4 +159,10 @@ void DataLayer::vectorToFile()
                          << CSstorer5000[i].getYearOfBirth()  << ";"
                          << CSstorer5000[i].getYearOfDeath()  << endl;
     }
+    vectorStream.close();
+}
+void DataLayer::addToVec(ComputerScientist newGuy)
+{
+    CSstorer5000.push_back(newGuy);
+    sort_vector();
 }

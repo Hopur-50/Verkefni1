@@ -35,3 +35,11 @@ void ServiceLayer::change_sort_order(int n)
 {
     dl.change_sort_order(n);
 }
+void ServiceLayer::vectorToFile()
+{
+    dl.vectorToFile();
+}
+void ServiceLayer::addToVec(ComputerScientist newGuy)
+{
+    dl.addToVec(newGuy);
+}
