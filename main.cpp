@@ -5,7 +5,11 @@ using namespace std;
 int main()
 {
     Interface message;
-    message.menu();
+    int userChoice;
+    do
+    {
+        message.menu(userChoice);
+    }while(userChoice!=5);
 
     return 0;
 }

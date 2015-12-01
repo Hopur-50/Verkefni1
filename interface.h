@@ -10,11 +10,12 @@ class Interface
 {
 public:
     Interface();
-    void menu();
+    void menu(int& userchoice);
     void addNew();
     void displayList();
     void selectOrder();
     void search();
+    void vectorToFile();
     void displayVector(vector<ComputerScientist> vec);
     void printCS(ComputerScientist cs);
 

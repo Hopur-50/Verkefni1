@@ -16,6 +16,8 @@ public:
     vector <ComputerScientist> findByYear(int year);
     int returnSizeOfVector();
     void change_sort_order(int n);
+    void vectorToFile();
+    void addToVec(ComputerScientist newGuy);
 
 private:
     DataLayer dl;

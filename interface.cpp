@@ -4,9 +4,8 @@ Interface::Interface()
 {
 
 }
-void Interface::menu()//displays the initial menu for user
+void Interface::menu(int& userChoice)//displays the initial menu for user
 {
-    int userChoice;
     cout << "Choose a number from the menu" << endl;
     cout << "-----------------------------" << endl;
     cout << "1 to add new item to database" << endl;
@@ -19,23 +18,23 @@ void Interface::menu()//displays the initial menu for user
     switch (userChoice) {
     case 1:
         addNew();
-        menu();
+        break;
     case 2:
         displayList();
-        menu();
+        break;
     case 3:
         selectOrder();
-        menu();
+        break;
     case 4:
         search();
-        menu();
+        break;
     case 5:
         break;
     default:
         cout << "Wrong input";
-        menu();
+        break;
     }
-    //bæta við vectortofile
+    vectorToFile();
 }
 
 void Interface::addNew()
@@ -60,7 +59,12 @@ void Interface::addNew()
     cin >> yod;
 
     ComputerScientist newGuy(firstName,lastName,gender,yob,yod);
+<<<<<<< HEAD
+    sl.addToVec(newGuy);
+
+=======
     sl.addNew(newGuy);
+>>>>>>> 137df71d0253da2d45d3b96411e1f599043aaa43
 }
 
 void Interface::displayList()
@@ -100,7 +104,7 @@ void Interface::printCS(ComputerScientist cs)
 
 void Interface::selectOrder()
 {
-    int userChoice;
+    int userChoice2;
     cout << "Which order would you like to retrieve list items in?" << endl;
     cout << "Choose one of the following numbers:" << endl;
     cout << "-----------------------------------------------------" << endl;
@@ -108,8 +112,8 @@ void Interface::selectOrder()
     cout << "2 for a list of first names in alphabetical order" << endl;
     cout << "3 for a list sorted by date of birth in ascending order" << endl;
     cout << "4 for a list sorted by date of birth in descending order" << endl;
-    cin >> userChoice;
-    if(userChoice > 0 && userChoice < 5) sl.change_sort_order(userChoice);
+    cin >> userChoice2;
+    if(userChoice2 > 0 && userChoice2 < 5) sl.change_sort_order(userChoice2);
     else {
         cout << "Wrong input";
         selectOrder();
@@ -139,4 +143,8 @@ void Interface::search()
     default:
         break;
     }
+}
+void Interface::vectorToFile()
+{
+    sl.vectorToFile();
 }

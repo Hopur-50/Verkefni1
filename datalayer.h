@@ -24,6 +24,7 @@ public:
     ComputerScientist* findByName(string name);
     vector <ComputerScientist> findByYear(int year);
     void vectorToFile();
+    void addToVec(ComputerScientist newGuy);
 
 
 private:
