@@ -13,42 +13,48 @@ void Interface::menu()//displays the initial menu for user
     cout << "Choose 2 to display all info" << endl;
     cout << "Choose 3 to arrange list" << endl;
     cout << "Choose 4 to search for a name" << endl;
+    cout << "Choose 5 to quit the program" << endl;
             //cout << "4. Edit" << endl;
             //cout << "5. Delete" << endl;
     cin >> userChoice;
     switch (userChoice) {
     case 1:
         addNew();
-        break;
+        menu();
     case 2:
         displayList();
-        break;
+        menu();
     case 3:
         selectOrder();
-        break;
+        menu();
     case 4:
         search();
+        menu();
+    case 5:
         break;
     default:
         cout << "Wrong input";
-        break;
+        menu();
     }
+    //bæta við einhverju til að klára?
 }
 
 void Interface::addNew()
 {
-
-    cout << "Please fill inn the fields below\n";
+    string firstName, lastName;
+    char gender;
+    int yob, yod;
+    cout << "Please fill in the fields below\n";
     cout << "First name: ";
-        cin >> firstName;
+    cin >> firstName;
     cout << "Last name: ";
     cin >> lastName;
     cout << "Gender, m for male and f for female, o for other:";
     cin >> gender;
     cout << "Year of birth: ";
-        cin >> yob;
+    cin >> yob;
     cout << "Year of death, if person is still alive enter 0\n";
-        cin >> yod;
+    cin >> yod;
     //ComputerScientist newGuy(firstName,lastName,gender,yob,yod);
 
     //call functions from datalayer to get info from user
@@ -108,10 +114,14 @@ void Interface::search()
     cin >> userChoice;
     switch (userChoice) {
     case 1:
+        cout << "What name would you like to search?" << endl;
+        cin >> name;
         sl.findByName(name);
         break;
     case 2:
-       sl.findByYear(year);
+        cout << "What year would you like to search?" << endl;
+        cin >> year;
+        sl.findByYear(year);
     default:
         break;
     }
