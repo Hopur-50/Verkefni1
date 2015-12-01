@@ -7,7 +7,10 @@ ServiceLayer::ServiceLayer()
 
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cc3d81936046f4947d28e657b5c11bb5c91314dc
 void ServiceLayer::read_from_file()
 {
      dl.read_from_file();
@@ -15,11 +18,6 @@ void ServiceLayer::read_from_file()
 vector<ComputerScientist> ServiceLayer::getCS()
 {
     return dl.getVector();
-}
-
-void ServiceLayer::sort_by_last()
-{
-     dl.sort_by_last();
 }
 
 ComputerScientist* ServiceLayer::findByName(string name)
@@ -32,22 +30,12 @@ vector <ComputerScientist> ServiceLayer::findByYear(int year)
      return dl.findByYear(year);
 }
 
-void ServiceLayer::sort_by_first()
-{
-    dl.sort_by_first();
-}
-
 int ServiceLayer::returnSizeOfVector()
 {
     return dl.get_vector_size();
 }
 
-void ServiceLayer::sort_by_year_ascending()
+void ServiceLayer::change_sort_order(int n)
 {
-    dl.sort_by_year_ascending();
-}
-
-void ServiceLayer::sort_by_year_descending()
-{
-    dl.sort_by_year_descending();
+    dl.change_sort_order(n);
 }

@@ -20,16 +20,18 @@ public:
     vector<ComputerScientist> getVector();
     void read_from_file();
     void sort_vector();
-    void sort_by_last();
-    void sort_by_first();
-    void sort_by_year_ascending();
-    void sort_by_year_descending();
+    void change_sort_order(int n);
     ComputerScientist* findByName(string name);
     vector <ComputerScientist> findByYear(int year);
     void vectorToFile();
 
 
 private:
+    void sort_by_last();
+    void sort_by_first();
+    void sort_by_year_ascending();
+    void sort_by_year_descending();
+
     vector<ComputerScientist> CSstorer5000;
     int current_sort;
 };

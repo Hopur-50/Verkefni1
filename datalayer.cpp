@@ -39,6 +39,12 @@ vector<ComputerScientist> DataLayer::getVector()
     return CSstorer5000;
 }
 
+void DataLayer::change_sort_order(int n)
+{
+    current_sort = n;
+    sort_vector();
+}
+
 void DataLayer::sort_vector()
 {
     switch (current_sort)

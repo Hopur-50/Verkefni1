@@ -16,8 +16,6 @@ public:
     void selectOrder();
     void search();
     void printAll();
-   /* void edit();
-    void deleteInfo();*/
 
 private:
     ServiceLayer sl;
