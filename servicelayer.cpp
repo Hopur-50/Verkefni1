@@ -1,5 +1,6 @@
 #include "servicelayer.h"
 #include "ComputerScientist.h"
+#include "datalayer.h"
 
 ServiceLayer::ServiceLayer()
 {
@@ -39,4 +40,9 @@ vector <ComputerScientist> ServiceLayer::findByYear(int year)
 void ServiceLayer::sort_by_first()
 {
     DataLayer.sort_by_first();
+}
+
+int ServiceLayer::returnSizeOfVector()
+{
+    return CSstorer5000.size();
 }
