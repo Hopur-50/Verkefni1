@@ -34,59 +34,50 @@ void DataLayer::read_from_file(){
     }
 }
 
+bool sort_last_name(ComputerScientist& cs1, ComputerScientist& cs2)
+{
+    string name1 = cs1.getLastName();
+    string name2 = cs2.getLastName();
+    if (name1.compare(name2) < 0) return true;
+    return false;
+}
 
 void DataLayer::sort_by_last()
 {
-    struct sort_last_name
-    {
-        bool operator() (ComputerScientist& cs1, ComputerScientist& cs2)
-        {
-            string name1 = cs1.getLastName();
-            string name2 = cs2.getLastName();
-            if (name1.compare(name2) < 0) return true;
-            return false;
-        }
-    };
-    sort(CSstorer5000.begin(), CSstorer5000.end(), sort_last_name());
+    sort(CSstorer5000.begin(), CSstorer5000.end(), sort_last_name);
+}
+
+bool sort_first_name(ComputerScientist& cs1, ComputerScientist& cs2)
+{
+    string name1 = cs1.getFirstName();
+    string name2 = cs2.getFirstName();
+    if (name1.compare(name2) < 0) return true;
+    return false;
 }
 
 void DataLayer::sort_by_first()
 {
-    struct sort_first_name
-    {
-        bool operator() (ComputerScientist& cs1, ComputerScientist& cs2)
-        {
-            string name1 = cs1.getFirstName();
-            string name2 = cs2.getFirstName();
-            if (name1.compare(name2) < 0) return true;
-            return false;
-        }
-    };
-    sort(CSstorer5000.begin(), CSstorer5000.end(), sort_first_name());
+    sort(CSstorer5000.begin(), CSstorer5000.end(), sort_first_name);
 }
 
-void sort_by_year_ascending()
+bool sort_year_asc(ComputerScientist& cs1, ComputerScientist& cs2)
 {
-    struct year_asc
-    {
-        bool operator() (ComputerScientist& cs1, ComputerScientist& cs2)
-        {
-            return cs1.getYearOfBirth() < cs2.getYearOfBirth();
-        }
-    };
-    sort(CSstorer5000.begin(), CSstorer5000.end(), year_asc());
+    return cs1.getYearOfBirth() < cs2.getYearOfBirth();
 }
 
-void sort_by_year_descending()
+void DataLayer::sort_by_year_ascending()
 {
-    struct year_desc
-    {
-        bool operator() (ComputerScientist& cs1, ComputerScientist& cs2)
-        {
-            return cs2.getYearOfBirth() < cs1.getYearOfBirth();
-        }
-    };
-    sort(CSstorer5000.begin(), CSstorer5000.end(), year_desc());
+    sort(CSstorer5000.begin(), CSstorer5000.end(), sort_year_asc);
+}
+
+bool sort_year_desc(ComputerScientist& cs1, ComputerScientist& cs2)
+{
+    return cs2.getYearOfBirth() < cs1.getYearOfBirth();
+}
+
+void DataLayer::sort_by_year_descending()
+{
+    sort(CSstorer5000.begin(), CSstorer5000.end(), sort_year_desc);
 }
 
 ComputerScientist DataLayer::findByName(string name)
