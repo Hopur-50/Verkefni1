@@ -7,26 +7,47 @@ DataLayer::DataLayer()
 //data
 
 
-void DataLayer::read_from_file(){
-    ifstream CSstream;
-    CSstream.open("Computer_Scientists.txt");
-    while(CSstream){
-        string str;
+void DataLayer::read_from_file()
+{
+
+    int counter=1;
+    string filename= "Computer_Scientists.txt";
+    ifstream CSstream(filename.c_str());
+    if (CSstream.fail())
+    {
+    cout << "file opening failed" << endl;
+    }
+    string str;
+    while(CSstream >> str){
         string first_name;
         string last_name;
         char sex;
         int yob;
         int yod;
-        getline(CSstream, str, ';');
-        stringstream ss(str);
-        while ((ss >> first_name >> last_name >> sex >> yob >> yod))
+        cout << counter << endl;
+        int pos1 = str.find(';');
+        int pos2 = str.find(';', pos1+1);
+        int pos3 = str.find(';', pos2+1);
+        int pos4 = str.find(';', pos3+1);
+        first_name=str.substr(0, pos1);
+        last_name=str.substr(pos1+1, pos2-pos1);
+        /*sex=str.substr(pos1+1, pos2-pos1);
+        yob=stoi(str.substr(pos2, pos3-pos2));
+        yod=stoi(str.substr(pos3, pos4-pos3));*/
+
+
+        ComputerScientist CStemp(first_name, last_name, sex, yob, yod);
+        CSstorer5000.push_back(CStemp);
+        /*while ((ss >> first_name >> last_name >> sex >> yob >> yod))
         {
             ComputerScientist CStemp(first_name, last_name, sex, yob, yod);
             CSstorer5000.push_back(CStemp);
-        }
+            cout << "a" << endl;
+        }*/
+        counter++;
     }
-    sort_vector();
     CSstream.close();
+    sort_vector();
 }
 
 void DataLayer::addNew(ComputerScientist cs)

@@ -2,7 +2,7 @@
 
 Interface::Interface()
 {
-    vectorToFile();
+    sl.read_from_file();
 }
 
 void Interface::menu(int& userChoice)//displays the initial menu for user

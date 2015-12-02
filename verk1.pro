@@ -17,5 +17,4 @@ HEADERS += \
 ComputerScientist.h \
 interface.h \
     datalayer.h \
-    servicelayer.h\
-    Computer_Scientists.txt
+    servicelayer.h
