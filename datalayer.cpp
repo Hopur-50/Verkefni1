@@ -4,27 +4,21 @@ DataLayer::DataLayer()
 {
     current_sort = LAST_NAME;
 }
-//data
 
-
-void DataLayer::read_from_file()
-{
-
-    int counter=1;
-    string filename= "Computer_Scientists.txt";
-    ifstream CSstream(filename.c_str());
+void DataLayer::read_from_file(){ //Allows the program to read from the file
+    ifstream CSstream;
+    CSstream.open("Computer_Scientists.txt");
     if (CSstream.fail())
     {
     cout << "file opening failed" << endl;
     }
     string str;
-    while(CSstream >> str){
+    while(CSstream){
         string first_name;
         string last_name;
         char sex;
         int yob;
         int yod;
-        cout << counter << endl;
         int pos1 = str.find(';');
         int pos2 = str.find(';', pos1+1);
         int pos3 = str.find(';', pos2+1);
@@ -38,13 +32,6 @@ void DataLayer::read_from_file()
 
         ComputerScientist CStemp(first_name, last_name, sex, yob, yod);
         CSstorer5000.push_back(CStemp);
-        /*while ((ss >> first_name >> last_name >> sex >> yob >> yod))
-        {
-            ComputerScientist CStemp(first_name, last_name, sex, yob, yod);
-            CSstorer5000.push_back(CStemp);
-            cout << "a" << endl;
-        }*/
-        counter++;
     }
     CSstream.close();
     sort_vector();
@@ -72,7 +59,7 @@ void DataLayer::change_sort_order(int n)
     sort_vector();
 }
 
-void DataLayer::sort_vector()
+void DataLayer::sort_vector() //Allows the user to choose(in interface) from wich way he wants to sort from
 {
     switch (current_sort)
     {
@@ -144,7 +131,7 @@ void DataLayer::sort_by_year_descending()
     sort(CSstorer5000.begin(), CSstorer5000.end(), sort_year_desc);
 }
 
-ComputerScientist* DataLayer::findByName(string name)
+ComputerScientist* DataLayer::findByName(string name) //Searches for the name that is input and returns as soon as it finds the same name
 {
     for (unsigned int i = 0; i < CSstorer5000.size(); i++)
     {
@@ -157,9 +144,9 @@ ComputerScientist* DataLayer::findByName(string name)
     return 0;
 }
 
-vector <ComputerScientist> DataLayer::findByYear(int year)
+vector <ComputerScientist> DataLayer::findByYear(int year) //Checks wich of the Computer Scientist were alive at what time
 {
-    vector <ComputerScientist> aliveThatYear;
+    vector <ComputerScientist> aliveThatYear; //A new vector so we can return only those thar are alive
 
     for (unsigned int i = 0; i < CSstorer5000.size(); i++)
     {
@@ -177,14 +164,12 @@ vector <ComputerScientist> DataLayer::findByYear(int year)
     return aliveThatYear;
 }
 
-
-void DataLayer::vectorToFile()
+void DataLayer::vectorToFile() //Function that prints what has been put in the vector to the file
 {
     ofstream vectorStream;
     vectorStream.open("Computer_Scientists.txt", std::ofstream::trunc | std::ofstream::app);
     for(unsigned int i = 0; i < CSstorer5000.size(); i++)
     {
-
            vectorStream  << CSstorer5000[i].getFirstName()    << ";"
                          << CSstorer5000[i].getLastName()     << ";"
                          << CSstorer5000[i].getGender()       << ";"
